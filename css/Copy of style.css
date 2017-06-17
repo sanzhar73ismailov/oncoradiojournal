@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+body {
+	/* 	background: #fff url(../img/header_outer.gif) repeat-x left 0; */
+	color: #333;
+	font-family: arial, helvetica, sans-serif;
+}
+
+#all {
+	background-color: teal;
+	border: solid 0px #ddd;
+}
+
+#header {
+	background-color: olive;
+}
+
+#content {
+/* 	position: relative; */
+/* 	padding: 0px 20px !important; */
+}
+
+#lefter {
+/* 	position: relative; */
+	background-color: lime;
+	float: left;
+	/* 	margin: 10px 3% 10px 0px; */
+/* 	width: 160px; */
+	width: 30%;
+/* 	min-width: 160px; */
+	/* 	position: relative; */
+}
+
+#wrapper {
+/* 	position: relative; */
+	background-color: gray;
+	width: auto;
+}
+
+#footer {
+	background-color: fuchsia;
+}

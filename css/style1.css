@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+
+body {
+	background: #fff url(../img/header_outer.gif) repeat-x left 0;
+	color: #333;
+	font-family: arial, helvetica, sans-serif;
+}
+
+#all {
+	color: #333;
+	border: solid 0px #ddd;
+}
+
+#back {
+	margin: 0;
+	padding: 0px;
+}
+
+#header {
+	background: #185359 url(../img/header.jpg) bottom left repeat-x;
+	position: relative;
+}
+
+.logoheader {
+	border-top: solid 1px transparent;
+	color: #fff;
+	background: url(../images/nature/bar.jpg) repeat-x top left;
+}
+
+h1#logo {
+	font-family: Arial;
+	text-shadow: #333 0.1em 0.1em 0.2em;
+}
+
+#logo span.header1 {
+	color: #fff;
+}
+
+#logo span.header1 {
+	font-size: 0.4em;
+	display: block;
+	top: 0em;
+	line-height: 0.8em;
+}
+
+#logo span {
+	color: #fff !important;
+	margin-top: 6px;
+}
+
+#btl .btl-panel {
+	overflow: hidden;
+}
+
+#btl .btl-panel>span, button.btl-buttonsubmit, input.btl-buttonsubmit {
+	border-radius: 0px;
+}
+
+#btl .btl-panel>span {
+	margin: 2px 0px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}

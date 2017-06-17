@@ -1,0 +1,418 @@
+[Sat May 28 06:34:44 2016] [Sat May 28 06:34:44 2016] Author Object
+(
+    [id] => 0
+    [last_name_kaz] => q
+    [first_name_kaz] => w
+    [patronymic_name_kaz] => e
+    [last_name_rus] => r
+    [first_name_rus] => r
+    [patronymic_name_rus] => t
+    [last_name_eng] => y
+    [first_name_eng] => u
+    [patronymic_name_eng] => i
+    [organization_name] => 
+    [organization_id] => 4
+    [email] => no@mail
+    [degree] => o
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Sat May 28 06:34:44 2016] [Sat May 28 06:34:44 2016] INSERT INTO
+			  `bibl_author`
+			(
+			  `id`,
+			  `last_name_kaz`,
+			  `last_name_rus`,
+			  `last_name_eng`,
+			  `first_name_kaz`,
+			  `first_name_rus`,
+			  `first_name_eng`,
+			  `patronymic_name_kaz`,
+			  `patronymic_name_rus`,
+			  `patronymic_name_eng`,
+			  `organization_name`,
+			  `organization_id`,
+			  `email`,
+			  `degree`,
+			  `user`
+			)
+			VALUE (
+			  :id,
+			  :last_name_kaz,
+			  :last_name_rus,
+			  :last_name_eng,
+			  :first_name_kaz,
+			  :first_name_rus,
+			  :first_name_eng,
+			  :patronymic_name_kaz,
+			  :patronymic_name_rus,
+			  :patronymic_name_eng,
+			  :organization_name,
+			  :organization_id,
+			  :email,
+			  :degree				
+			  :user
+			)
+[Sat May 28 06:34:44 2016] [Sat May 28 06:34:44 2016] $inserId0
+[Sat May 28 08:49:45 2016] [Sat May 28 08:49:45 2016] Author Object
+(
+    [id] => 0
+    [last_name_kaz] => q
+    [first_name_kaz] => w
+    [patronymic_name_kaz] => e
+    [last_name_rus] => r
+    [first_name_rus] => r
+    [patronymic_name_rus] => t
+    [last_name_eng] => y
+    [first_name_eng] => u
+    [patronymic_name_eng] => i
+    [organization_name] => 
+    [organization_id] => 4
+    [email] => no@mail
+    [degree] => o
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Sat May 28 08:49:45 2016] [Sat May 28 08:49:45 2016] INSERT INTO
+			  `bibl_author`
+			(
+			  `id`,
+			  `last_name_kaz`,
+			  `last_name_rus`,
+			  `last_name_eng`,
+			  `first_name_kaz`,
+			  `first_name_rus`,
+			  `first_name_eng`,
+			  `patronymic_name_kaz`,
+			  `patronymic_name_rus`,
+			  `patronymic_name_eng`,
+			  `organization_name`,
+			  `organization_id`,
+			  `email`,
+			  `degree`,
+			  `user`
+			)
+			VALUE (
+			  :id,
+			  :last_name_kaz,
+			  :last_name_rus,
+			  :last_name_eng,
+			  :first_name_kaz,
+			  :first_name_rus,
+			  :first_name_eng,
+			  :patronymic_name_kaz,
+			  :patronymic_name_rus,
+			  :patronymic_name_eng,
+			  :organization_name,
+			  :organization_id,
+			  :email,
+			  :degree				
+			  :user
+			)
+[Sat May 28 08:49:45 2016] [Sat May 28 08:49:45 2016] $inserId0
+[Sat May 28 08:51:43 2016] [Sat May 28 08:51:43 2016] Author Object
+(
+    [id] => 0
+    [last_name_kaz] => q
+    [first_name_kaz] => w
+    [patronymic_name_kaz] => e
+    [last_name_rus] => r
+    [first_name_rus] => r
+    [patronymic_name_rus] => t
+    [last_name_eng] => y
+    [first_name_eng] => u
+    [patronymic_name_eng] => i
+    [organization_name] => 
+    [organization_id] => 4
+    [email] => no@mail
+    [degree] => o
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Sat May 28 08:51:43 2016] [Sat May 28 08:51:43 2016] INSERT INTO
+			  `bibl_author`
+			(
+			  `id`,
+			  `last_name_kaz`,
+			  `last_name_rus`,
+			  `last_name_eng`,
+			  `first_name_kaz`,
+			  `first_name_rus`,
+			  `first_name_eng`,
+			  `patronymic_name_kaz`,
+			  `patronymic_name_rus`,
+			  `patronymic_name_eng`,
+			  `organization_name`,
+			  `organization_id`,
+			  `email`,
+			  `degree`,
+			  `user`
+			)
+			VALUE (
+			  :id,
+			  :last_name_kaz,
+			  :last_name_rus,
+			  :last_name_eng,
+			  :first_name_kaz,
+			  :first_name_rus,
+			  :first_name_eng,
+			  :patronymic_name_kaz,
+			  :patronymic_name_rus,
+			  :patronymic_name_eng,
+			  :organization_name,
+			  :organization_id,
+			  :email,
+			  :degree,				
+			  :user
+			)
+[Sat May 28 09:24:36 2016] [Sat May 28 09:24:36 2016] Author Object
+(
+    [id] => 0
+    [last_name_kaz] => f
+    [first_name_kaz] => f
+    [patronymic_name_kaz] => f
+    [last_name_rus] => f
+    [first_name_rus] => f
+    [patronymic_name_rus] => f
+    [last_name_eng] => f
+    [first_name_eng] => f
+    [patronymic_name_eng] => f
+    [organization_name] => 
+    [organization_id] => 2
+    [email] => f@dfdf
+    [degree] => dfdfd
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Sat May 28 09:24:36 2016] [Sat May 28 09:24:36 2016] INSERT INTO
+			  `bibl_author`
+			(
+			  `id`,
+			  `last_name_kaz`,
+			  `last_name_rus`,
+			  `last_name_eng`,
+			  `first_name_kaz`,
+			  `first_name_rus`,
+			  `first_name_eng`,
+			  `patronymic_name_kaz`,
+			  `patronymic_name_rus`,
+			  `patronymic_name_eng`,
+			  `organization_name`,
+			  `organization_id`,
+			  `email`,
+			  `degree`,
+			  `user`
+			)
+			VALUE (
+			  :id,
+			  :last_name_kaz,
+			  :last_name_rus,
+			  :last_name_eng,
+			  :first_name_kaz,
+			  :first_name_rus,
+			  :first_name_eng,
+			  :patronymic_name_kaz,
+			  :patronymic_name_rus,
+			  :patronymic_name_eng,
+			  :organization_name,
+			  :organization_id,
+			  :email,
+			  :degree,				
+			  :user
+			)
+[Sat May 28 09:24:36 2016] [Sat May 28 09:24:36 2016] $inserId127
+[Mon May 30 07:26:14 2016] [Mon May 30 07:26:14 2016] Author Object
+(
+    [id] => 0
+    [last_name_kaz] => Ажмагамбетова
+    [first_name_kaz] => А
+    [patronymic_name_kaz] => Ж
+    [last_name_rus] => Ажмагамбетова
+    [first_name_rus] => А
+    [patronymic_name_rus] => Ж
+    [last_name_eng] => Azmagambetova
+    [first_name_eng] => A
+    [patronymic_name_eng] => Zh
+    [organization_name] => 
+    [organization_id] => 1
+    [email] => no@mail
+    [degree] => -
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Mon May 30 07:26:14 2016] [Mon May 30 07:26:14 2016] INSERT INTO
+			  `bibl_author`
+			(
+			  `id`,
+			  `last_name_kaz`,
+			  `last_name_rus`,
+			  `last_name_eng`,
+			  `first_name_kaz`,
+			  `first_name_rus`,
+			  `first_name_eng`,
+			  `patronymic_name_kaz`,
+			  `patronymic_name_rus`,
+			  `patronymic_name_eng`,
+			  `organization_name`,
+			  `organization_id`,
+			  `email`,
+			  `degree`,
+			  `user`
+			)
+			VALUE (
+			  :id,
+			  :last_name_kaz,
+			  :last_name_rus,
+			  :last_name_eng,
+			  :first_name_kaz,
+			  :first_name_rus,
+			  :first_name_eng,
+			  :patronymic_name_kaz,
+			  :patronymic_name_rus,
+			  :patronymic_name_eng,
+			  :organization_name,
+			  :organization_id,
+			  :email,
+			  :degree,				
+			  :user
+			)
+[Mon May 30 07:26:14 2016] [Mon May 30 07:26:14 2016] $inserId158
+[Tue May 31 02:50:48 2016] [Tue May 31 02:50:48 2016] Author Object
+(
+    [id] => 1
+    [last_name_kaz] => я_нет_имени1
+    [first_name_kaz] => я_нет_имени1
+    [patronymic_name_kaz] => я_нет_имени1
+    [last_name_rus] => я_нет_имени1
+    [first_name_rus] => я_нет_имени1
+    [patronymic_name_rus] => я_нет_имени1
+    [last_name_eng] => я_нет_имени1
+    [first_name_eng] => я_нет_имени1
+    [patronymic_name_eng] => я_нет_имени1
+    [organization_name] => 
+    [organization_id] => 5
+    [email] => no@mail
+    [degree] => -
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Tue May 31 03:49:29 2016] [Tue May 31 03:49:29 2016] Author Object
+(
+    [id] => 0
+    [last_name_kaz] => ЫВАЫ
+    [first_name_kaz] => ЫВ
+    [patronymic_name_kaz] => ЫАЫВ
+    [last_name_rus] => ВАЫВ
+    [first_name_rus] => ЫВА
+    [patronymic_name_rus] => ЫВА
+    [last_name_eng] => SFSD
+    [first_name_eng] => SDFS
+    [patronymic_name_eng] => WERWR
+    [organization_name] => 
+    [organization_id] => 1
+    [email] => no@mail
+    [degree] => -
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Tue May 31 03:49:29 2016] [Tue May 31 03:49:29 2016] INSERT INTO
+			  `bibl_author`
+			(
+			  `id`,
+			  `last_name_kaz`,
+			  `last_name_rus`,
+			  `last_name_eng`,
+			  `first_name_kaz`,
+			  `first_name_rus`,
+			  `first_name_eng`,
+			  `patronymic_name_kaz`,
+			  `patronymic_name_rus`,
+			  `patronymic_name_eng`,
+			  `organization_name`,
+			  `organization_id`,
+			  `email`,
+			  `degree`,
+			  `user`
+			)
+			VALUE (
+			  :id,
+			  :last_name_kaz,
+			  :last_name_rus,
+			  :last_name_eng,
+			  :first_name_kaz,
+			  :first_name_rus,
+			  :first_name_eng,
+			  :patronymic_name_kaz,
+			  :patronymic_name_rus,
+			  :patronymic_name_eng,
+			  :organization_name,
+			  :organization_id,
+			  :email,
+			  :degree,				
+			  :user
+			)
+[Tue May 31 03:49:29 2016] [Tue May 31 03:49:29 2016] $inserId159
+[Tue May 31 12:22:03 2016] [Tue May 31 12:22:03 2016] Author Object
+(
+    [id] => 0
+    [last_name_kaz] => Q
+    [first_name_kaz] => Q
+    [patronymic_name_kaz] => Q
+    [last_name_rus] => Q
+    [first_name_rus] => Q
+    [patronymic_name_rus] => Q
+    [last_name_eng] => Q
+    [first_name_eng] => Q
+    [patronymic_name_eng] => Q
+    [organization_name] => 
+    [organization_id] => 1
+    [email] => q@dfdf
+    [degree] => q
+    [user] => sanzhar73@mail.ru
+    [insert_date] => 
+)
+
+[Tue May 31 12:22:03 2016] [Tue May 31 12:22:03 2016] INSERT INTO
+			  `bibl_author`
+			(
+			  `id`,
+			  `last_name_kaz`,
+			  `last_name_rus`,
+			  `last_name_eng`,
+			  `first_name_kaz`,
+			  `first_name_rus`,
+			  `first_name_eng`,
+			  `patronymic_name_kaz`,
+			  `patronymic_name_rus`,
+			  `patronymic_name_eng`,
+			  `organization_name`,
+			  `organization_id`,
+			  `email`,
+			  `degree`,
+			  `user`
+			)
+			VALUE (
+			  :id,
+			  :last_name_kaz,
+			  :last_name_rus,
+			  :last_name_eng,
+			  :first_name_kaz,
+			  :first_name_rus,
+			  :first_name_eng,
+			  :patronymic_name_kaz,
+			  :patronymic_name_rus,
+			  :patronymic_name_eng,
+			  :organization_name,
+			  :organization_id,
+			  :email,
+			  :degree,				
+			  :user
+			)
+[Tue May 31 12:22:03 2016] [Tue May 31 12:22:03 2016] $inserId160

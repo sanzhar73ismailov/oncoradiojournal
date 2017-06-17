@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Protected zone!"
+AuthUserFile /var/www/v-7179/data/www/oncojournal.kz/.htpasswd
+require valid-user
+
