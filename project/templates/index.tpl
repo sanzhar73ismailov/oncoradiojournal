@@ -4,9 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <link rel="shortcut icon" href="img/2012.png" type="image/png">
 <title>{$title}</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+{*<link rel="stylesheet" type="text/css" href="css/style.css" />*}
 <script type="text/javascript" src="jscript/myscript.js"></script>
 <script type="text/javascript" src="jscript/jquery-1.11.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<div id="container">
@@ -33,5 +34,6 @@
 		{include file='footer.tpl'}
 		</div>
 	<!-- end container -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

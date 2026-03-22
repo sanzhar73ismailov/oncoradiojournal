@@ -3,8 +3,8 @@
 
 define("HOST", "localhost");
 define("DB_USER", "root");
-define("DB_PASS", "elsieltc");
-define("DB_NAME", "oncoradiojournal");
+define("DB_PASS", "");
+define("DB_NAME", "p-5080_bibl_publication");
 
 /*
 define("HOST", "localhost");

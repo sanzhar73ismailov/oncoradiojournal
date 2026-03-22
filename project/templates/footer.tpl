@@ -1,10 +1,7 @@
-<div id="footer">
-	
-			<div
-				style="width: 600px; height: 80px; position: relative; left: 400px; text-align: center">
-				(c) <a class="kaznii" href="http://www.onco.kz/">{$text['kaznii_name']}</a><br>
-			</div>
-
-
-</div>
-<!-- end footer -->
+<footer class="bg-light border-top mt-4 py-3">
+	<div class="container text-center small text-muted">
+		(c) <a href="http://www.onco.kz/" class="text-decoration-none">
+			{$text['kaznii_name']}
+		</a>
+	</div>
+</footer>
