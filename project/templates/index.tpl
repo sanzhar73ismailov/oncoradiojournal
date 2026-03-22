@@ -9,31 +9,23 @@
 <script type="text/javascript" src="jscript/jquery-1.11.0.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-	<div id="container">
+<body class="bg-light">
 	{include file="header.tpl"}
 		
-		<div id="navigation">
-		<div id="nabigButtons">
-		<!--  
+		<!--
 			<span id="btl-panel-login" class="btl-modal">Войти</span>
 			<span id="btl-panel-registration" class="btl-modal">Регистрация</span>
 		-->
-		</div>
-		</div>
 		<!-- end navigation -->
 
 		{include file="menu.tpl"}
-		
-		<div id="content">
-			{include file="$contentPage.tpl"}
 
+	    <div class="container my-4">
+			{include file="$contentPage.tpl"}
 		</div>
-		<div id="clear"></div>
-		<!-- end content -->
-		{include file='footer.tpl'}
-		</div>
-	<!-- end container -->
+
+	    {include file='footer.tpl'}
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
