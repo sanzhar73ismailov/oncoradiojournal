@@ -31,6 +31,10 @@ class Publication{
 	public $issue_id;
 	public $section_name;
 	public $author_orgs; // двумерный массив (авторый и организации) для вывода на странице абстракта
+    public $year;
+    public $number;
+    public $issue;
+
 	public function getAuthorNames(){
 		$authors = $this->author_orgs[0];
 		$str = "";
