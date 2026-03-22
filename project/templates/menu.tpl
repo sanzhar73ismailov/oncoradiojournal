@@ -15,12 +15,6 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link {if $page == 'editorial-board'}active{/if}" href="?page=editorial-board">
-						{$text['editorial-board_menu']}
-					</a>
-				</li>
-
-				<li class="nav-item">
 					<a class="nav-link {if $page == 'current_issue'}active{/if}" href="?page=current_issue">
 						{$text['current_issue_menu']}
 					</a>
@@ -29,12 +23,6 @@
 				<li class="nav-item">
 					<a class="nav-link {if $page == 'search'}active{/if}" href="?page=search">
 						{$text['search']}
-					</a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link {if $page == 'regulations'}active{/if}" href="?page=regulations">
-						{$text['regulations_menu']}
 					</a>
 				</li>
 

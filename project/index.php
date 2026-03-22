@@ -35,7 +35,7 @@ if($lang=="kz"){
 
 $ip = getRealIpAddr();
 $userAgent = getUserAgent();
-$title = $_LANG['journal_name'];
+$title = $_LANG['title_journal_name'];
 
 switch ($page) {
 	case "index" :
