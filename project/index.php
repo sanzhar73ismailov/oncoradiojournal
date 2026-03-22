@@ -48,6 +48,9 @@ switch ($page) {
 		$search_criteria = "";
 		$sortby = "asc";
 		//printInHtml($_REQUEST);
+
+        $publs = array();
+
 		if(isset($_REQUEST ['search']) and $_REQUEST ['search'] !="" and isset($_REQUEST ['fn'])){
 			$sortby = isset($_REQUEST ['sortby']) ? $_REQUEST ['sortby'] : "asc";
 			$publs = $model->getPublicationsByCriteria($_REQUEST ['search'],$_REQUEST ['fn'],$lang_for_model,$sortby);

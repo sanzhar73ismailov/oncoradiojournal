@@ -12,9 +12,13 @@
 			<h1 class="h4 mb-1">{$text['journal_name']}</h1>
 			<div class="text-muted small">
 				{$text['created_in_year']}<br>
-				<strong>{$text['ISSN']}</strong>
+			</div>
+			<div class="text-muted small">
+				ISSN: 1684-93X | Квартальный журнал
 			</div>
 		</div>
+
+
 
 		<!-- Языки -->
 		<div class="col-md-3 text-center text-md-end">
