@@ -1,6 +1,10 @@
 <?php
-define ( 'SMARTY_DIR', './Smarty-3.1.18/libs/' );
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+define ( 'SMARTY_DIR', './smarty-5.8.0/libs/' );
 require_once (SMARTY_DIR . 'Smarty.class.php');
+use Smarty\Smarty;
 // include_once 'includes/functions.php';
 include_once 'includes/global.php';
 //include_once 'includes/stat.php';
@@ -8,6 +12,7 @@ include_once 'includes/model.php';
 //include_once 'includes/tabgeo_country_v4.php';
 
 $smarty = new Smarty ();
+$smarty->registerPlugin('modifier', 'mb_substr', 'mb_substr');
 $model = new Model();
 
 $page = isset ( $_REQUEST ['page'] ) == true ? $_REQUEST ['page'] : "index";

@@ -22,7 +22,7 @@ class Publication{
 	public $abstract;
 	public $authors;
 	public $keywords;
-	public $udk;
+	public $code_udk;
 	public $email;
 	public $p_first;
 	public $p_last;

@@ -196,7 +196,7 @@ class Model{
 					$publObj->abstract = $rowOfPubl['abstract_' . $lang];
 					$publObj->authors = $rowOfPubl['authors'];
 					$publObj->keywords = $rowOfPubl['keywords'];
-					$publObj->udk = $rowOfPubl['udk'];
+					$publObj->code_udk = $rowOfPubl['code_udk'];
 					$publObj->email = ''; //$rowOfPubl['udk'];
 					$publObj->p_first = $rowOfPubl['p_first'];
 					$publObj->p_last = $rowOfPubl['p_last'];
@@ -232,14 +232,14 @@ class Model{
 			$publObj->name = $rowOfPubl['name_' . $lang];
 			$publObj->abstract = $rowOfPubl['abstract_' . $lang];
 			$publObj->keywords = $rowOfPubl['keywords'];
-			$publObj->udk = $rowOfPubl['udk'];
+			$publObj->code_udk = $rowOfPubl['code_udk'];
 			$publObj->email = ''; //$rowOfPubl['udk'];
 			$publObj->p_first = $rowOfPubl['p_first'];
 			$publObj->p_last = $rowOfPubl['p_last'];
 			$publObj->file = $rowOfPubl['file'];
-			$publObj->sector_id = $rowOfPubl['sector_id'];
+			//$publObj->sector_id = $rowOfPubl['sector_id'];
 			$publObj->section_name = $rowOfPubl['section_name'];
-			$publObj->code_udk = $rowOfPubl['code_udk'];
+			//$publObj->code_udk = $rowOfPubl['code_udk'];
 			$publObj->p_first = $rowOfPubl['p_first'];
 			$publObj->p_last = $rowOfPubl['p_last'];
 			$publObj->issue_id = $rowOfPubl['issue_id'];
@@ -322,7 +322,7 @@ class Model{
 		}
 		return $issue_array;
 	}
-	public function insertPublStatistics($type="p",$itemId, $lang, $ip, $user_agent, $action='view'){
+	public function insertPublStatistics($type,$itemId, $lang, $ip, $user_agent, $action='view'){
 		$newId = 0;
 		try {
 			$query = "INSERT INTO
@@ -546,7 +546,7 @@ class Model{
 			$publObj->abstract = $rowOfPubl['abstract_' . $lang];
 			$publObj->authors = $rowOfPubl['authors'];
 			$publObj->keywords = $rowOfPubl['keywords'];
-			$publObj->udk = $rowOfPubl['udk'];
+			$publObj->code_udk = $rowOfPubl['code_udk'];
 			$publObj->email = ''; //$rowOfPubl['udk'];
 			$publObj->p_first = $rowOfPubl['p_first'];
 			$publObj->p_last = $rowOfPubl['p_last'];
