@@ -1,11 +1,7 @@
 <div id="contacts">
-<h1>Байланыстар</h1>
-Алматы қ., 050022, Абая д. 91.<br/>
-РМК " ҚР ДСӘДМ Қазақтың онкология және радиология ғылыми-зерттеу институты"<br/>
-<b>Телефон:</b> (327) 292 10 63 (ішкі нөмір. 229,127)<br/>
-<b>Эл. мекен-жай:</b> 
-<a href="mailto:kairbayev@gmail.com">kairbayev@gmail.com</a>, <a href="mailto:goncharova.2004@mail.ru">goncharova.2004@mail.ru</a>
-<br/>
-<b>Басылымға жауапты тұлға:</b> Имангалиева Нуршекар Темиржановна, т. 8-701-4858044.<br/>
-<b>Әкімшіліктік редактор:</b> Кайрбаев Мурат Решатович  т. 8-701-2359500
+    <h1>{$text['Contacts']}</h1>
+    <b>{$text['Email']}:</b>
+    <a href="mailto:sanzhar73@gmail.com">sanzhar73@gmail.com</a>
+    <br/>
+    <b>{$text['Administrator']}:</b> м.ғ.к., биостатистик Исмаилов Санжар
 </div>

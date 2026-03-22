@@ -50,11 +50,11 @@
 		</a>
 
 		<!-- Ключевые слова -->
-		<p><b>Ключевые слова:</b> {$publication->keywords}</p>
+		<p><b>{$text['keywords']}:</b> {$publication->keywords}</p>
 
 		<!-- Цитирование -->
 		<div class="mt-3 p-3 bg-light border rounded small">
-			<b>Ссылка:</b><br>
+			<b>{$text['Citation']}:</b><br>
 			{foreach from=$authors item=author name=authors_cycle}
 				{$author->last_name|mb_substr:0:1}{($author->last_name|mb_substr:1:($author->last_name|count_characters))|lower}
 				{$author->first_name|mb_substr:0:1}.{$author->patronymic_name|mb_substr:0:1}.

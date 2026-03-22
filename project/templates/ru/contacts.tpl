@@ -1,8 +1,7 @@
 <div id="contacts">
-<h1>Контакты</h1>
-<b>Эл. адрес:</b>
-<a href="mailto:sanzhar73@gmail.com">sanzhar73@gmail.com</a>
-<br/>
-<b>Администратор:</b> к.м.н., биостатистик Исмаилов Санжар Булатович
-
+    <h1>{$text['Contacts']}</h1>
+    <b>{$text['Email']}:</b>
+    <a href="mailto:sanzhar73@gmail.com">sanzhar73@gmail.com</a>
+    <br/>
+    <b>{$text['Administrator']}:</b> к.м.н., биостатистик Исмаилов Санжар Булатович
 </div>
