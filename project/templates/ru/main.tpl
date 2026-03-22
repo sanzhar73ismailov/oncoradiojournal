@@ -1,10 +1,117 @@
-<div id="main">
-<h1>Журнал</h1>
-Научно-практический журнал, посвященный проблемам онкологии и радиологии, основанный в 2002 году. 
-			Журнал является одним из самых авторитетных в Республике Казахстан. Собственник – РГП на ПХВ «Казахский научно-исследовательский 
-			институт онкологии и радиологии Министерства здравоохранения и социального развития Республики Казахстан». 
-			Журнал адресован широкой аудитории читателей: ученым, клиницистам, соискателям, аспирантам, преподавателям, студентам, 
-			специализирующимся в области онкологии и радиологии. В онлайн-версии доступны содержание номеров и аннотации на русском и английском языке. 
-			Все статьи (лекции, статистика, история онкологии, обзоры) представлены в полном виде. Выпускается 1 раз в 3 месяца.
-            Свидетельство о регистрации - №10248-ж от 14.07.2009 г. ISSN 1684-93Х, подписной индекс -74684.
-</div>			
+<div class="row">
+
+	<!-- Основной блок -->
+	<div class="col-lg-8">
+
+		<!-- Hero -->
+		<div class="p-4 mb-4 bg-light rounded shadow-sm">
+			<h1 class="h4 mb-3">{$text['journal_name']}</h1>
+			<p>
+				Научно-практический журнал, посвящённый проблемам онкологии и радиологии,
+				основанный в 2002 году.
+			</p>
+			<p class="mb-0">
+				Журнал предназначен для учёных, клиницистов, аспирантов и студентов.
+				Публикуются оригинальные исследования, обзоры, лекции и статистические данные.
+			</p>
+		</div>
+
+		<!-- Быстрые действия -->
+		<div class="row g-3 mb-4">
+
+			<div class="col-md-4">
+				<a href="?page=current_issue" class="text-decoration-none">
+					<div class="card h-100 text-center shadow-sm">
+						<div class="card-body">
+							<div class="fs-1">📖</div>
+							<div>Текущий номер</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-4">
+				<a href="?page=archive" class="text-decoration-none">
+					<div class="card h-100 text-center shadow-sm">
+						<div class="card-body">
+							<div class="fs-1">📚</div>
+							<div>Архив</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-4">
+				<a href="?page=search" class="text-decoration-none">
+					<div class="card h-100 text-center shadow-sm">
+						<div class="card-body">
+							<div class="fs-1">🔍</div>
+							<div>Поиск статей</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div>
+
+		<!-- О журнале -->
+		<div class="card shadow-sm mb-4">
+			<div class="card-body">
+				<h5>О журнале</h5>
+				<p>
+					Журнал является одним из ведущих научных изданий Республики Казахстан.
+					Учредитель — {$text['kaznii_name']}.
+				</p>
+				<p>
+					Выпускается 1 раз в 3 месяца. В онлайн-версии доступны полные тексты статей
+					и аннотации на русском и английском языках.
+				</p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Сайдбар -->
+	<div class="col-lg-4">
+
+		<!-- Последний выпуск -->
+		<div class="card shadow-sm mb-4">
+			<div class="card-body">
+				<h5>Последний выпуск</h5>
+
+				<p class="mb-2">
+					{$text['current_issue_menu']}
+				</p>
+
+				<a href="?page=current_issue" class="btn btn-primary btn-sm">
+					Смотреть
+				</a>
+			</div>
+		</div>
+
+		<!-- Для авторов -->
+		<div class="card shadow-sm mb-4">
+			<div class="card-body">
+				<h5>Авторам</h5>
+				<p>
+					Ознакомьтесь с правилами оформления и подачи статей.
+				</p>
+				<a href="?page=regulations" class="btn btn-outline-secondary btn-sm">
+					Правила
+				</a>
+			</div>
+		</div>
+
+		<!-- Контакты -->
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<h5>Контакты</h5>
+				<a href="?page=contacts" class="btn btn-outline-secondary btn-sm">
+					Перейти
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+</div>
