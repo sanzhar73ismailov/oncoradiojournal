@@ -9,7 +9,7 @@
 
 		<!-- Заголовок -->
 		<div class="col-md-7 text-center text-md-start">
-			<h1 class="h4 mb-1">{$text['journal_name']}</h1>
+			<h1 class="h4 mb-1">{$text['title_journal_name']}</h1>
 			<div class="text-muted small">
 				{$text['created_in_year']}<br>
 			</div>
