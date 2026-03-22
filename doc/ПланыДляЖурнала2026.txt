@@ -13,7 +13,7 @@
 
 Добавить:
 
-Google Scholar meta tags
++Google Scholar meta tags
 citation_* теги
 
 Следующий уровень (если хочешь)
@@ -37,3 +37,5 @@ OpenGraph (для соцсетей)
 👉 сделать hreflang правильно (multi-language SEO)
 👉 или переписать URL на красивые (/article/123)
 👉 или подготовить сайт под Scopus требования
+
+проверить, видит ли Google сайт
