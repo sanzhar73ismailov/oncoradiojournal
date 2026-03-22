@@ -8,6 +8,9 @@
 <script type="text/javascript" src="jscript/myscript.js"></script>
 <script type="text/javascript" src="jscript/jquery-1.11.0.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	{include file="google_scholar_meta_tags.tpl"}
+
 </head>
 <body class="bg-light">
 	{include file="header.tpl"}

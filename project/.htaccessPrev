@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /var/www/vhosts/biostat.kz/oncoarchive2010to2017.biostat.kz/.htpasswd
+Require valid-user

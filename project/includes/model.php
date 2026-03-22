@@ -243,6 +243,13 @@ class Model{
 			$publObj->p_first = $rowOfPubl['p_first'];
 			$publObj->p_last = $rowOfPubl['p_last'];
 			$publObj->issue_id = $rowOfPubl['issue_id'];
+            $publObj->language = $rowOfPubl['language'];
+
+            $publObj->language_iso = match ($rowOfPubl['language'] ?? '') {
+                'kazakh' => 'kz',
+                'russian' => 'ru',
+                default => 'en',
+            };
 		}
 		$publObj->author_orgs = $this->getAuthorsAndOrgs($id, $lang);
 		return $publObj;
@@ -559,6 +566,11 @@ class Model{
 		}
 		return $rowOfPublArray;
 	}
+
+    public function getAllPublications() {
+        $sql = "SELECT id FROM bibl_publication"; // имя таблицы уточни
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_OBJ);
+    }
 
 } //end of class
 

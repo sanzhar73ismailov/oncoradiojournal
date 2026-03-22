@@ -34,6 +34,8 @@ class Publication{
     public $year;
     public $number;
     public $issue;
+    public $language;
+    public $language_iso;
 
 	public function getAuthorNames(){
 		$authors = $this->author_orgs[0];

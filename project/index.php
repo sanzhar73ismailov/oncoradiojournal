@@ -26,12 +26,10 @@ include('lang/' . $lang . '.php');
 if(isset ( $_REQUEST ['id'] )){
 	$smarty->assign('id', $_REQUEST ['id']);
 }
-$lang_for_model = "rus";
+$lang_for_model = "eng";
 if($lang=="kz"){
 	$lang_for_model = "kaz";
-}elseif ($lang=="en"){
-	$lang_for_model = "eng";
-}else{
+}elseif ($lang=="ru"){
 	$lang_for_model = "rus";
 }
 
