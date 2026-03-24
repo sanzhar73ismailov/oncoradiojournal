@@ -14,7 +14,7 @@
 				{$text['created_in_year']}<br>
 			</div>
 			<div class="text-muted small">
-				ISSN: 1684-93X | Квартальный журнал
+				ISSN: 1684-93X | {$text['journal.periodicity']}
 			</div>
 		</div>
 

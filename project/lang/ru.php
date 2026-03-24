@@ -3,6 +3,7 @@ $_LANG = array(
     'journal_name' => 'Журнал &laquo;Онкология и радиология Казахстана&raquo;',
     'title_journal_name' => 'Архив журнала &laquo;Онкология и радиология Казахстана&raquo; за 2010-2017 годы',
     'journal_name_short' => 'Онкология и радиология Казахстана',
+    'journal.periodicity' => 'Квартальный журнал',
     'created_in_year' => 'Создан в 2002 году',
     'ISSN' => 'ISSN 1684-93Х (печатная версия)',
     'journal_menu' => 'Главная',
@@ -23,6 +24,20 @@ $_LANG = array(
     'Contacts' => 'Контакты',
     'Email' => 'Электронная почта',
     'Administrator' => 'Администратор',
+    'searchPage.title' => 'Поиск',
+    'searchPage.placeholder' => 'Введите запрос...',
+    'searchPage.searchIn' => 'Искать',
+    'searchPage.author' => 'Автор',
+    'searchPage.titleField' => 'Название',
+    'searchPage.abstract' => 'Реферат',
+    'searchPage.keywords' => 'Ключевые слова',
+    'searchPage.sorting' => 'Сортировка',
+    'searchPage.sortAsc' => 'Сначала старые',
+    'searchPage.sortDesc' => 'Сначала новые',
+    'searchPage.button' => 'Искать',
+    'searchPage.found' => 'Найдено',
+    'searchPage.openPage' => 'Открыть страницу',
+    'searchPage.downloadPdf' => 'PDF',
 );
 
 
