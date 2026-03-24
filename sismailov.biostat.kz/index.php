@@ -25,7 +25,7 @@
 
     <style>
         body {
-            padding: 200px; /* отступ от краев экрана */
+            padding: 50px; /* отступ от краев экрана */
             background-color: #f8f9fa;
         }
 
