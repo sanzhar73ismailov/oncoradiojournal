@@ -1,5 +1,5 @@
 <?php
-define('SMARTY_DIR', '../Smarty-3.1.18/libs/');
+define('SMARTY_DIR', '../smarty-5.8.0/libs/');
 define('SITE_NAME', "Публикации КАЗНИИ ОиР");
 define('DEBUG', "1");
 define('ADMIN_CODE', "onco2014");
@@ -22,6 +22,7 @@ include_once 'includes/class_EntityEditAbstr.php';
 include_once 'includes/class_global.php';
 include_once 'includes/functions.php';
 
+use Smarty\Smarty;
 $smarty = new Smarty();
 $smarty->assign('application_name',SITE_NAME);
 //$smarty->force_compile = true;

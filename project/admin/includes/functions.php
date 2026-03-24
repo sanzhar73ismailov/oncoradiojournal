@@ -392,7 +392,7 @@ function fill_investigation_form_by_dic($smarty, $dao){
 function getDateFromSqlDate($input_val){
 
 	$pattern = "#^\d\d\d\d-\d\d-\d\d#";
-	if(strlen($input_val) == 0){
+	if(strlen($input_val ?? "") == 0){
 		return null;
 	}
 	if(!preg_match($pattern, $input_val)){
