@@ -97,6 +97,7 @@
             LinkedIn: <a href="https://linkedin.com/in/sanzhar-ismailov-53033377" target="_blank">linkedin.com/in/sanzhar-ismailov-53033377</a><br>
             GitHub: <a href="https://github.com/sanzhar73ismailov" target="_blank">github.com/sanzhar73ismailov</a><br>
             Scopus: <a href="https://www.scopus.com/authid/detail.uri?authorId=16304383300" target="_blank">16304383300</a>
+            Google Scholar: <a href="https://scholar.google.com/citations?user=m6oeeG0AAAAJ" target="_blank">m6oeeG0AAAAJ</a>
         </p>
 
         <h3>Избранные публикации</h3>
