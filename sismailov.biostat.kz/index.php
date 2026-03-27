@@ -11,7 +11,7 @@ if (!in_array($lang, $allowed_langs)) {
     $lang = $default_lang;
 }
 $_SESSION['lang'] = $lang;
-
+$photoUrl = 'https://' . $_SERVER['HTTP_HOST']. '/img/sismailov_photo.png';;
 // ======================== ТЕКСТЫ ДЛЯ КАЖДОГО ЯЗЫКА ========================
 $translations = [
     'ru' => [
@@ -155,13 +155,13 @@ $t = $translations[$lang];
     <meta property="og:description" content="<?php echo htmlspecialchars($t['og_description']); ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oncoarchive2010to2017.biostat.kz/">
-    <meta property="og:image" content="URL_картинки_для_соцсетей"> <!-- можно добавить лого или фото -->
+    <meta property="og:image" content="<?php echo $photoUrl; ?>">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="<?php echo $photoUrl; ?>">
     <meta name="twitter:title" content="<?php echo htmlspecialchars($t['twitter_title']); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($t['twitter_description']); ?>">
-    <meta name="twitter:image" content="URL_картинки_для_соцсетей">
+    <meta name="twitter:image" content="<?php echo $photoUrl; ?>">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
