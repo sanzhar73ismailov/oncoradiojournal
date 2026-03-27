@@ -158,7 +158,7 @@ $t = $translations[$lang];
     <meta property="og:image" content="<?php echo $photoUrl; ?>">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="<?php echo $photoUrl; ?>">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo htmlspecialchars($t['twitter_title']); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($t['twitter_description']); ?>">
     <meta name="twitter:image" content="<?php echo $photoUrl; ?>">
