@@ -1,23 +1,166 @@
+<?php
+session_start();
+
+// Список поддерживаемых языков
+$allowed_langs = ['ru', 'en', 'kk'];
+$default_lang = 'ru';
+
+// Определяем текущий язык
+$lang = isset($_GET['lang']) ? $_GET['lang'] : ($_SESSION['lang'] ?? $default_lang);
+if (!in_array($lang, $allowed_langs)) {
+    $lang = $default_lang;
+}
+$_SESSION['lang'] = $lang;
+
+// ======================== ТЕКСТЫ ДЛЯ КАЖДОГО ЯЗЫКА ========================
+$translations = [
+    'ru' => [
+        'page_title' => 'О себе — Биостатистика, онкология, публикации, программирование',
+        'meta_description' => 'Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании (Java, Python, R, SPSS). Создатель сайта архива журнала.',
+        'meta_keywords' => 'биостатистика, онкология, медицинская информатика, публикации, международные журналы, HPV, клинические исследования, статистика, программирование, Java, R, Python, SPSS, сайт архива журнала',
+        'og_title' => 'О себе — Биостатистика, онкология, публикации, программирование',
+        'og_description' => 'Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании. Создатель сайта архива журнала.',
+        'twitter_title' => 'О себе — Биостатистика, онкология, публикации, программирование',
+        'twitter_description' => 'Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании. Создатель сайта архива журнала.',
+        'heading_main' => 'О себе',
+        'text_intro' => 'Я — <strong>кандидат медицинских наук</strong>, специалист в области <strong>биостатистики, онкологии и медицинской информатики</strong> с многолетним опытом научной и практической работы.',
+        'text_dissertation' => 'В 2006 году защитил диссертацию на тему <strong>«Генетические факторы предрасположенности к развитию рака шейки матки в Казахстане»</strong> по специальностям <strong>14.00.14 — онкология</strong> и <strong>03.00.15 — генетика</strong>.',
+        'highlights' => [
+            '🧬 Работаю в <strong>онкологии и биостатистике</strong>',
+            '📊 Имею публикации, включая международные',
+            '💻 Совмещаю это с программированием',
+            '📚 Создал и веду сайт архива журнала:'
+        ],
+        'interests_text' => 'Моя основная область интересов — <strong>применение статистических методов в клинических и эпидемиологических исследованиях</strong>, особенно в онкологии.',
+        'interests_list' => [
+            'рак шейки матки и вирус папилломы человека (HPV)',
+            'молекулярная онкология и канцерогенез',
+            'эпидемиология онкологических заболеваний',
+            'клинические исследования и анализ данных'
+        ],
+        'skills_title' => 'Навыки биостатистики',
+        'skills_list' => [
+            '<strong>Статистические методы:</strong> t-критерий Стьюдента, χ²-тест, регрессия, корреляция',
+            '<strong>Клинические исследования:</strong> дизайн, анализ, интерпретация',
+            '<strong>Инструменты:</strong> R, SPSS, Python, Java, SQL',
+            '<strong>Данные:</strong> очистка, подготовка, визуализация',
+            '<strong>Методология:</strong> эпидемиология, биомедицинская статистика'
+        ],
+        'profiles_title' => 'Профили / Идентификаторы исследователя',
+        'publications_title' => 'Избранные публикации',
+        'publications' => [
+            // Публикации оставляем без изменений (они на языках оригинала)
+        ]
+    ],
+    'en' => [
+        'page_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
+        'meta_description' => 'Candidate of Medical Sciences, specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming (Java, Python, R, SPSS). Creator of the journal archive website.',
+        'meta_keywords' => 'biostatistics, oncology, medical informatics, publications, international journals, HPV, clinical research, statistics, programming, Java, R, Python, SPSS, journal archive website',
+        'og_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
+        'og_description' => 'Candidate of Medical Sciences, specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming. Creator of the journal archive website.',
+        'twitter_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
+        'twitter_description' => 'Candidate of Medical Sciences, specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming. Creator of the journal archive website.',
+        'heading_main' => 'About Me',
+        'text_intro' => 'I am a <strong>Candidate of Medical Sciences</strong>, a specialist in <strong>biostatistics, oncology, and medical informatics</strong> with many years of experience in scientific and practical work.',
+        'text_dissertation' => 'In 2006, I defended my dissertation on the topic <strong>“Genetic predisposition factors for the development of cervical cancer in Kazakhstan”</strong> in the specialties <strong>14.00.14 — oncology</strong> and <strong>03.00.15 — genetics</strong>.',
+        'highlights' => [
+            '🧬 Working in <strong>oncology and biostatistics</strong>',
+            '📊 Have publications, including international ones',
+            '💻 Combine this with programming',
+            '📚 Created and maintain the journal archive website:'
+        ],
+        'interests_text' => 'My main area of interest is <strong>the application of statistical methods in clinical and epidemiological research</strong>, especially in oncology.',
+        'interests_list' => [
+            'cervical cancer and human papillomavirus (HPV)',
+            'molecular oncology and carcinogenesis',
+            'epidemiology of cancer',
+            'clinical trials and data analysis'
+        ],
+        'skills_title' => 'Biostatistics Skills',
+        'skills_list' => [
+            '<strong>Statistical methods:</strong> Student\'s t-test, χ²-test, regression, correlation',
+            '<strong>Clinical research:</strong> design, analysis, interpretation',
+            '<strong>Tools:</strong> R, SPSS, Python, Java, SQL',
+            '<strong>Data:</strong> cleaning, preparation, visualization',
+            '<strong>Methodology:</strong> epidemiology, biomedical statistics'
+        ],
+        'profiles_title' => 'Researcher Profiles / Identifiers',
+        'publications_title' => 'Selected Publications',
+        'publications' => [] // same as ru
+    ],
+    'kk' => [
+        'page_title' => 'Өзім туралы — Биостатистика, онкология, жарияланымдар, бағдарламалау',
+        'meta_description' => 'Медицина ғылымдарының кандидаты, биостатистика және онкология саласының маманы. Халықаралық журналдардағы жарияланымдар, клиникалық зерттеулер және бағдарламалау тәжірибесі (Java, Python, R, SPSS). Журнал архивінің сайтын жасаушы.',
+        'meta_keywords' => 'биостатистика, онкология, медициналық информатика, жарияланымдар, халықаралық журналдар, HPV, клиникалық зерттеулер, статистика, бағдарламалау, Java, R, Python, SPSS, журнал архивінің сайты',
+        'og_title' => 'Өзім туралы — Биостатистика, онкология, жарияланымдар, бағдарламалау',
+        'og_description' => 'Медицина ғылымдарының кандидаты, биостатистика және онкология саласының маманы. Халықаралық журналдардағы жарияланымдар, клиникалық зерттеулер және бағдарламалау тәжірибесі. Журнал архивінің сайтын жасаушы.',
+        'twitter_title' => 'Өзім туралы — Биостатистика, онкология, жарияланымдар, бағдарламалау',
+        'twitter_description' => 'Медицина ғылымдарының кандидаты, биостатистика және онкология саласының маманы. Халықаралық журналдардағы жарияланымдар, клиникалық зерттеулер және бағдарламалау тәжірибесі. Журнал архивінің сайтын жасаушы.',
+        'heading_main' => 'Өзім туралы',
+        'text_intro' => 'Мен — <strong>медицина ғылымдарының кандидаты</strong>, <strong>биостатистика, онкология және медициналық информатика</strong> саласында ғылыми-практикалық жұмыста ұзақ жылдық тәжірибесі бар маманмын.',
+        'text_dissertation' => '2006 жылы <strong>«Қазақстанда жатыр мойны обырының дамуына бейімділіктің генетикалық факторлары»</strong> тақырыбында <strong>14.00.14 — онкология</strong> және <strong>03.00.15 — генетика</strong> мамандықтары бойынша диссертация қорғадым.',
+        'highlights' => [
+            '🧬 <strong>Онкология және биостатистика</strong> саласында жұмыс істеймін',
+            '📊 Халықаралық деңгейдегі жарияланымдарым бар',
+            '💻 Осыны бағдарламалаумен ұштастырамын',
+            '📚 Журнал архивінің сайтын құрдым және жүргіземін:'
+        ],
+        'interests_text' => 'Менің негізгі қызығушылығым — <strong>клиникалық және эпидемиологиялық зерттеулерде статистикалық әдістерді қолдану</strong>, әсіресе онкология саласында.',
+        'interests_list' => [
+            'жатыр мойны обыры және адам папилломавирусы (HPV)',
+            'молекулярлық онкология және канцерогенез',
+            'онкологиялық аурулардың эпидемиологиясы',
+            'клиникалық зерттеулер және деректерді талдау'
+        ],
+        'skills_title' => 'Биостатистика дағдылары',
+        'skills_list' => [
+            '<strong>Статистикалық әдістер:</strong> Стьюдент t-критериі, χ²-тест, регрессия, корреляция',
+            '<strong>Клиникалық зерттеулер:</strong> дизайн, талдау, интерпретация',
+            '<strong>Құралдар:</strong> R, SPSS, Python, Java, SQL',
+            '<strong>Деректер:</strong> тазарту, дайындау, визуализация',
+            '<strong>Әдіснама:</strong> эпидемиология, биомедициналық статистика'
+        ],
+        'profiles_title' => 'Зерттеуші профильдері / Идентификаторлар',
+        'publications_title' => 'Таңдаулы жарияланымдар',
+        'publications' => [] // same as ru
+    ]
+];
+
+// Публикации (не переводятся, остаются в оригинале)
+$publications_list = [
+    '<li>Lyu B.N., Lyu M.B., Ismailov B.I., <strong>Ismailov S.B.</strong> (2007). Four hypotheses on mitochondria\'s role in the development and regulation of oxidative stress in the normal state, cell pathology and reversion of tumor cells. <em>Medical Hypotheses</em>.<br>PubMed: <a href="https://pubmed.ncbi.nlm.nih.gov/17207937/" target="_blank">17207937</a></li>',
+    '<li>Brás A., Cotrim C.Z., Vasconcelos I., Mexia J., Léonard A., <strong>Sanzhar I.</strong>, Akhmatullina N., Rueff J. (2008). Asynchronous DNA replication detected by fluorescence in situ hybridisation as a possible indicator of genetic damage in human lymphocytes. <em>Oncology Reports</em>.<br>PubMed: <a href="https://pubmed.ncbi.nlm.nih.gov/18202783/" target="_blank">18202783</a></li>',
+    '<li>Lyu B.N., <strong>Ismailov S.B.</strong>, Ismailov B., Lyu M.B. (2008). Mitochondrial concept of leukemogenesis: key role of oxygen-peroxide effects. <em>Theoretical Biology and Medical Modelling</em>.<br>PubMed: <a href="https://pubmed.ncbi.nlm.nih.gov/19014456/" target="_blank">19014456</a></li>',
+    '<li>Нургазиев К.Ш., Байпеисов Д.М., <strong>Исмаилов С.Б.</strong>, Камхен В.Б. (2014). Информационно-аналитический сборник «Статистика злокачественных новообразований в 2004–2013 годах и прогноз до 2020 года».<br>PDF: <a href="pdfs/27_sbornik2014.pdf" target="_blank">27_sbornik2014.pdf</a></li>',
+    '<li><strong>Исмаилов С.Б.</strong> (2013). Выбор статистического метода для анализа результатов клинических исследований.<br>PDF: <a href="pdfs/25_2013.4.30_01.pdf" target="_blank">25_2013.4.30_01.pdf</a><br>www.elibrary.ru: <a href="https://www.elibrary.ru/item.asp?id=32575883" target="_blank">17207937</a></li>',
+    '<li><strong>Исмаилов С.Б.</strong> (2014). Практическое использование критерия Стьюдента.<br>PDF: <a href="pdfs/26_2014.1.31_01.pdf" target="_blank">26_2014.1.31_01.pdf</a><br>www.elibrary.ru: <a href="https://www.elibrary.ru/item.asp?id=32601757" target="_blank">17207937</a></li>',
+    '<li>Kaidarova D., Kairbayev M., Kim H., Han B.D., <strong>Ismailov S.</strong>, Shibanova A., Kukubassov Y., Shalbayeva R., Yeleubayeva Zh., Bolatbekova R., Park H.J., Kim H.J. (2018). Prevalence of high-risk human papillomaviruses and abnormal PAP smears among women visiting gynaecological outpatient units in Kazakhstan: A cross sectional study. <em>Journal of Clinical Oncology</em>.<br>DOI: <a href="https://doi.org/10.1200/JCO.2018.36.15_suppl.e13596" target="_blank">10.1200/JCO.2018.36.15_suppl.e13596</a></li>'
+];
+
+$t = $translations[$lang];
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $lang; ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>О себе — Биостатистика, онкология, публикации, программирование</title>
+    <title><?php echo htmlspecialchars($t['page_title']); ?></title>
 
     <!-- SEO метатеги -->
-    <meta name="description" content="Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании (Java, Python, R, SPSS). Создатель сайта архива журнала.">
-    <meta name="keywords" content="биостатистика, онкология, медицинская информатика, публикации, международные журналы, HPV, клинические исследования, статистика, программирование, Java, R, Python, SPSS, сайт архива журнала">
+    <meta name="description" content="<?php echo htmlspecialchars($t['meta_description']); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars($t['meta_keywords']); ?>">
 
     <!-- Open Graph для соцсетей -->
-    <meta property="og:title" content="О себе — Биостатистика, онкология, публикации, программирование">
-    <meta property="og:description" content="Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании. Создатель сайта архива журнала.">
+    <meta property="og:title" content="<?php echo htmlspecialchars($t['og_title']); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($t['og_description']); ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oncoarchive2010to2017.biostat.kz/">
     <meta property="og:image" content="URL_картинки_для_соцсетей"> <!-- можно добавить лого или фото -->
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="О себе — Биостатистика, онкология, публикации, программирование">
-    <meta name="twitter:description" content="Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании. Создатель сайта архива журнала.">
+    <meta name="twitter:title" content="<?php echo htmlspecialchars($t['twitter_title']); ?>">
+    <meta name="twitter:description" content="<?php echo htmlspecialchars($t['twitter_description']); ?>">
     <meta name="twitter:image" content="URL_картинки_для_соцсетей">
 
     <!-- Bootstrap -->
@@ -25,79 +168,79 @@
 
     <style>
         body {
-            padding: 50px; /* отступ от краев экрана */
+            padding: 50px;
             background-color: #f8f9fa;
         }
-
         .card {
-            padding: 100px; /* внутренние отступы внутри карточки */
+            padding: 100px;
         }
-
         ol, ul {
-            margin-left: 25px; /* немного смещаем списки */
+            margin-left: 25px;
         }
-
         a {
-            word-break: break-all; /* чтобы длинные ссылки не вылазили за края */
+            word-break: break-all;
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switcher a {
+            margin-left: 10px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            color: #0d6efd;
+        }
+        .lang-switcher a.active {
+            background-color: #0d6efd;
+            color: white;
         }
     </style>
 </head>
-
 <body>
 
 <div class="container">
+    <div class="lang-switcher">
+        <a href="?lang=kk" class="<?php echo $lang == 'kk' ? 'active' : ''; ?>">Қазақша</a>
+        <a href="?lang=ru" class="<?php echo $lang == 'ru' ? 'active' : ''; ?>">Русский</a>
+        <a href="?lang=en" class="<?php echo $lang == 'en' ? 'active' : ''; ?>">English</a>
+    </div>
+
     <div class="card shadow-sm">
+        <h2 class="mb-3"><?php echo $t['heading_main']; ?></h2>
 
-        <h2 class="mb-3">О себе</h2>
+        <p><?php echo $t['text_intro']; ?></p>
+        <p><?php echo $t['text_dissertation']; ?></p>
 
-        <p>
-            Я — <strong>кандидат медицинских наук</strong>, специалист в области
-            <strong>биостатистики, онкологии и медицинской информатики</strong>
-            с многолетним опытом научной и практической работы.
-        </p>
-
-        <p>
-            В 2006 году защитил диссертацию на тему
-            <strong>«Генетические факторы предрасположенности к развитию рака шейки матки в Казахстане»</strong>
-            по специальностям <strong>14.00.14 — онкология</strong> и <strong>03.00.15 — генетика</strong>.
-        </p>
-
-        <!-- Новый блок с тезисами -->
         <ul class="profile-highlights list-unstyled">
-            <li>🧬 Работаю в <strong>онкологии и биостатистике</strong></li>
-            <li>📊 Имею публикации, включая международные</li>
-            <li>💻 Совмещаю это с программированием</li>
-            <li>📚 Создал и веду сайт архива журнала:
-                <a href="https://oncoarchive2010to2017.biostat.kz/" target="_blank">oncoarchive2010to2017.biostat.kz</a>
-            </li>
+            <?php foreach ($t['highlights'] as $item): ?>
+                <li><?php echo $item; ?></li>
+            <?php endforeach; ?>
+            <?php if (end($t['highlights']) === $t['highlights'][3]): ?>
+                <a href="https://oncoarchive2010to2017.biostat.kz/" target="_blank">oncoarchive2010to2017.biostat.kz</a></li>
+            <?php endif; ?>
         </ul>
 
-        <p>
-            Моя основная область интересов — <strong>применение статистических методов
-                в клинических и эпидемиологических исследованиях</strong>, особенно в онкологии.
-        </p>
-
+        <p><?php echo $t['interests_text']; ?></p>
         <ul>
-            <li>рак шейки матки и вирус папилломы человека (HPV)</li>
-            <li>молекулярная онкология и канцерогенез</li>
-            <li>эпидемиология онкологических заболеваний</li>
-            <li>клинические исследования и анализ данных</li>
+            <?php foreach ($t['interests_list'] as $item): ?>
+                <li><?php echo $item; ?></li>
+            <?php endforeach; ?>
         </ul>
 
         <hr>
 
-        <h3>Навыки биостатистики</h3>
+        <h3><?php echo $t['skills_title']; ?></h3>
         <ul>
-            <li><strong>Статистические методы:</strong> t-критерий Стьюдента, χ²-тест, регрессия, корреляция</li>
-            <li><strong>Клинические исследования:</strong> дизайн, анализ, интерпретация</li>
-            <li><strong>Инструменты:</strong> R, SPSS, Python, Java, SQL</li>
-            <li><strong>Данные:</strong> очистка, подготовка, визуализация</li>
-            <li><strong>Методология:</strong> эпидемиология, биомедицинская статистика</li>
+            <?php foreach ($t['skills_list'] as $item): ?>
+                <li><?php echo $item; ?></li>
+            <?php endforeach; ?>
         </ul>
 
         <hr>
 
-        <h3>Профили / Идентификаторы исследователя</h3>
+        <h3><?php echo $t['profiles_title']; ?></h3>
         <p>
             ORCID: <a href="https://orcid.org/0000-0001-8907-5874" target="_blank">0000-0001-8907-5874</a><br>
             LinkedIn: <a href="https://linkedin.com/in/sanzhar-ismailov-53033377" target="_blank">linkedin.com/in/sanzhar-ismailov-53033377</a><br>
@@ -107,63 +250,13 @@
         </p>
 
         <hr>
-        <h3>Избранные публикации</h3>
-        <ul>
-            <li>
-                Lyu B.N., Lyu M.B., Ismailov B.I., <strong>Ismailov S.B.</strong> (2007).
-                Four hypotheses on mitochondria's role in the development and regulation of oxidative stress in the normal state, cell pathology and reversion of tumor cells.
-                <em>Medical Hypotheses</em>.
-                <br>
-                PubMed:
-                <a href="https://pubmed.ncbi.nlm.nih.gov/17207937/" target="_blank">17207937</a>
-            </li>
-            <li>
-                Brás A., Cotrim C.Z., Vasconcelos I., Mexia J., Léonard A., Sanzhar I.,
-                Akhmatullina N., Rueff J. (2008).
-                Asynchronous DNA replication detected by fluorescence in situ hybridisation as a possible indicator of genetic damage in human lymphocytes.
-                <em>Oncology Reports</em>.
-                <br>
-                PubMed:
-                <a href="https://pubmed.ncbi.nlm.nih.gov/18202783/" target="_blank">18202783</a>
-            </li>
-            <li>
-                Lyu B.N., <strong>Ismailov S.B.</strong>, Ismailov B., Lyu M.B. (2008).
-                Mitochondrial concept of leukemogenesis: key role of oxygen-peroxide effects.
-                <em>Theoretical Biology and Medical Modelling</em>.
-                <br>
-                PubMed:
-                <a href="https://pubmed.ncbi.nlm.nih.gov/19014456/" target="_blank">19014456</a>
-            </li>
-            <li>
-                Нургазиев К.Ш., Байпеисов Д.М., <strong>Исмаилов С.Б.</strong>, Камхен В.Б. (2014). Информационно-аналитический сборник «Статистика злокачественных новообразований в 2004–2013 годах и прогноз до 2020 года».
-                <br>PDF: <a href="pdfs/27_sbornik2014.pdf" target="_blank">27_sbornik2014.pdf</a>
-            </li>
-            <li>
-                <strong>Исмаилов С.Б.</strong> (2013). Выбор статистического метода для анализа результатов клинических исследований.
-                <br>PDF: <a href="pdfs/25_2013.4.30_01.pdf" target="_blank">25_2013.4.30_01.pdf</a>
-                <br>www.elibrary.ru:
-                <a href="https://www.elibrary.ru/item.asp?id=32575883" target="_blank">17207937</a>
-            </li>
-            <li>
-                <strong>Исмаилов С.Б.</strong> (2014). Практическое использование критерия Стьюдента.
-                <br>PDF: <a href="pdfs/26_2014.1.31_01.pdf" target="_blank">26_2014.1.31_01.pdf</a>
-                <br>www.elibrary.ru:
-                <a href="https://www.elibrary.ru/item.asp?id=32601757" target="_blank">17207937</a>
-            </li>
-            <li>
-                Kaidarova D., Kairbayev M., Kim H., Han B.D., <strong>Ismailov S.</strong>, Shibanova A.,
-                Kukubassov Y., Shalbayeva R., Yeleubayeva Zh., Bolatbekova R.,
-                Park H.J., Kim H.J. (2018).
-                Prevalence of high-risk human papillomaviruses and abnormal PAP smears among women visiting gynaecological outpatient units in Kazakhstan: A cross sectional study.
-                <em>Journal of Clinical Oncology</em>.
-                <br>
-                DOI:
-                <a href="https://doi.org/10.1200/JCO.2018.36.15_suppl.e13596" target="_blank">
-                    10.1200/JCO.2018.36.15_suppl.e13596
-                </a>
-            </li>
-        </ul>
 
+        <h3><?php echo $t['publications_title']; ?></h3>
+        <ul>
+            <?php foreach ($publications_list as $pub): ?>
+                <?php echo $pub; ?>
+            <?php endforeach; ?>
+        </ul>
     </div>
 </div>
 
