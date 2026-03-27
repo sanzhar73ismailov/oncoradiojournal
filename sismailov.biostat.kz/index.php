@@ -67,8 +67,7 @@
 
         <p>
             Моя основная область интересов — <strong>применение статистических методов
-            в клинических и эпидемиологических исследованиях</strong>, особенно в онкологии,
-            онкологической гинекологии и молекулярной биологии.
+            в клинических и эпидемиологических исследованиях</strong>, особенно в онкологии.
         </p>
 
         <ul>
@@ -96,10 +95,11 @@
             ORCID: <a href="https://orcid.org/0000-0001-8907-5874" target="_blank">0000-0001-8907-5874</a><br>
             LinkedIn: <a href="https://linkedin.com/in/sanzhar-ismailov-53033377" target="_blank">linkedin.com/in/sanzhar-ismailov-53033377</a><br>
             GitHub: <a href="https://github.com/sanzhar73ismailov" target="_blank">github.com/sanzhar73ismailov</a><br>
-            Scopus: <a href="https://www.scopus.com/authid/detail.uri?authorId=16304383300" target="_blank">16304383300</a>
+            Scopus: <a href="https://www.scopus.com/authid/detail.uri?authorId=16304383300" target="_blank">16304383300</a><br>
             Google Scholar: <a href="https://scholar.google.com/citations?user=m6oeeG0AAAAJ" target="_blank">m6oeeG0AAAAJ</a>
         </p>
 
+        <hr>
         <h3>Избранные публикации</h3>
         <ul>
             <li>
@@ -128,6 +128,22 @@
                 <a href="https://pubmed.ncbi.nlm.nih.gov/19014456/" target="_blank">19014456</a>
             </li>
             <li>
+                Нургазиев К.Ш., Байпеисов Д.М., <strong>Исмаилов С.Б.</strong>, Камхен В.Б. (2014). Информационно-аналитический сборник «Статистика злокачественных новообразований в 2004–2013 годах и прогноз до 2020 года».
+                <br>PDF: <a href="pdfs/27_sbornik2014.pdf" target="_blank">27_sbornik2014.pdf</a>
+            </li>
+            <li>
+                <strong>Исмаилов С.Б.</strong> (2013). Выбор статистического метода для анализа результатов клинических исследований.
+                <br>PDF: <a href="pdfs/25_2013.4.30_01.pdf" target="_blank">25_2013.4.30_01.pdf</a>
+                <br>www.elibrary.ru:
+                <a href="https://www.elibrary.ru/item.asp?id=32575883" target="_blank">17207937</a>
+            </li>
+            <li>
+                <strong>Исмаилов С.Б.</strong> (2014). Практическое использование критерия Стьюдента.
+                <br>PDF: <a href="pdfs/26_2014.1.31_01.pdf" target="_blank">26_2014.1.31_01.pdf</a>
+                <br>www.elibrary.ru:
+                <a href="https://www.elibrary.ru/item.asp?id=32601757" target="_blank">17207937</a>
+            </li>
+            <li>
                 Kaidarova D., Kairbayev M., Kim H., Han B.D., <strong>Ismailov S.</strong>, Shibanova A.,
                 Kukubassov Y., Shalbayeva R., Yeleubayeva Zh., Bolatbekova R.,
                 Park H.J., Kim H.J. (2018).
@@ -141,177 +157,7 @@
             </li>
         </ul>
 
-        <hr>
 
-        <h3 class="mt-4">Полный список публикаций</h3>
-        <ol>
-
-                <li>
-                    Ismailov B. I., Tobagabyl L. T., Podobed I. S., <strong>Ismailov S. B.</strong>, Kalybaeva M. K.,
-                    Lyu M. B., Auganbaeva R. P., Asenova E. K., Pivovarov L. P. (2000).
-                    Prospects of study of radio-modeling anti-tumour and immune-modeling activity of structuring water.
-                    <br>
-                    <a href="https://www.osti.gov/etdeweb/biblio/20204693" target="_blank">Full text</a>
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong>, Юлдашева Р.Ж. (2001).
-                    Выделение вируса папилломы человека у женщин с различными патологиями шейки матки.
-                </li>
-
-                <li>
-                    <strong>Ismailov S.B.</strong>, Akhmatullina N.B., Kolycheva N.I. (2002).
-                    Detection of high risk human papillomavirus nucleic acid in archival cervical tissues by polymerase chain reaction.
-                </li>
-
-                <li>
-                    Ахматуллина Н.Б., <strong>Исмаилов С.Б.</strong> (2002).
-                    Трансформирующая функция вируса папилломы человека и модель канцерогенеза.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong>, Ахматуллина Н.Б. (2003).
-                    Выделение ДНК вирусов папилломы человека из парафиновых тканей методом частичного восстановления деградированной ДНК.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong>, Ахматуллина Н.Б., Нургалиев Д.Ж., Колычева Н.И., Имянитов Е.Н. (2003).
-                    Полиморфизм 72 кодона гена p53 и HPV-ассоциированный канцерогенез.
-                </li>
-
-                <li>
-                    Akhmatullina N.B., <strong>Ismailov S.B.</strong> (2004).
-                    Papillomavirus infection in healthy women from Almaty.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong>, Ахматуллина Н.Б., Юлдашева Р.Ж., Нургалиев Д.Ж., Ольшевская Н.В., Тагиева Т.А., Пак С.П. (2004).
-                    Некоторые закономерности инсерции ДНК вируса папилломы человека в клетки шейки матки.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong>, Танатова З.А., Садыкова Т.Т., Юлдашева Р.Ж. (2004).
-                    Хромосомные аберрации в культурах лимфоцитов периферической крови больных раком шейки матки.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong>, Ахматуллина Н.Б. (2005).
-                    Сравнительные цитогенетическое и молекулярно-генетическое обследования женщин,
-                    проживающих в радиационно-загрязненных и чистых регионах Казахстана.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong> (2005).
-                    Физический статус ДНК папилломавирусов у здоровых и больных раком шейки матки женщин.
-                </li>
-
-                <li>
-                    Имянитов Е.Н., <strong>Исмаилов С.Б.</strong>, Ахматуллина Н.Б. (2005).
-                    Способ выделения ДНК вирусов папилломы человека (патент).
-                </li>
-
-                <li>
-                    Akhmatullina N.B., <strong>Ismailov S.</strong> (2006).
-                    Influence of environmental genotoxicants on cervical cancer morbidity.
-                </li>
-
-                <li>
-                    Lyu B.N., Lyu M.B., Ismailov B.I., <strong>Ismailov S.B.</strong> (2007).
-                    Four hypotheses on mitochondria's role in the development and regulation of oxidative stress.
-                    <br>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/17207937/" target="_blank">PubMed</a>
-                </li>
-
-                <li>
-                    Brás A., Cotrim C.Z., Vasconcelos I., Mexia J., Léonard A., Sanzhar I., Akhmatullina N., Rueff J. (2008).
-                    Asynchronous DNA replication detected by fluorescence in situ hybridisation.
-                    <br>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/18202783/" target="_blank">PubMed</a>
-                </li>
-
-                <li>
-                    Lyu B.N., <strong>Ismailov S.B.</strong>, Ismailov B., Lyu M.B. (2008).
-                    Mitochondrial concept of leukemogenesis.
-                    <br>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/19014456/" target="_blank">PubMed</a>
-                </li>
-
-                <li>
-                    Liu B.N., <strong>Ismailov S.B.</strong>, Liu M.B. (2008).
-                    The state of cytoskeleton and its links “oxygen-peroxide” effects.
-                    <br>
-                    <a href="http://pbmc.ibmc.msk.ru/ru/article-ru/PBMC-2008-54-1-58/" target="_blank">Full text</a>
-                </li>
-
-                <li>
-                    Исмаилов Б.И., <strong>Исмаилов С.Б.</strong> (2012).
-                    Гипотезы о роли митохондрий в развитии и регуляции уровня окислительного стресса.
-                </li>
-
-                <li>
-                    Исмаилов Б.И., <strong>Исмаилов С.Б.</strong> (2012).
-                    Выявление наследственной гетерогенности популяции стволовых опухолевых клеток при клонировании in vivo.
-                </li>
-
-                <li>
-                    Kairbayev M., Shibanova A., Yeleubayeva Zh., Shalbayeva R., Kukubassov E., Bolatbekova R.,
-                    Kussainova B., <strong>Ismailov S.</strong> (2013).
-                    Incidence of abnormal cytological findings and high-risk HPV-positivity in Kazakhstani women.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong> (2013).
-                    Выбор статистического метода для анализа результатов клинических исследований.
-                </li>
-
-                <li>
-                    Нургазиев К.Ш., Байпеисов Д.М., <strong>Исмаилов С.Б.</strong>, Камхен В.Б. (2014).
-                    Информационно-аналитический сборник
-                    «Статистика злокачественных новообразований в 2004–2013 годах и прогноз до 2020 года
-                    (заболеваемость, смертность и выживаемость)». Алматы.
-                </li>
-
-                <li>
-                    <strong>Исмаилов С.Б.</strong> (2014).
-                    Практическое использование критерия Стьюдента.
-                </li>
-
-                <li>
-                    Kairbayev M., Bolatbekova R., Dossakhanov Z., Kurmanova A., <strong>Ismailov S.</strong>, Serikov S. (2015).
-                    Accuracy of pretreatment imaging and laparoscopic surgical staging in cervical cancer.
-                </li>
-
-                <li>
-                    Кайбуллаева Д.А., Шумков Ю.П., Хабижанова А.С., <strong>Исмаилов С.Б.</strong>, Тахаев З.В.,
-                    Алиева Л.Н., Душпанова А.Т., Ибраева Е.Т. (2016).
-                    Опыт применения лекарственного препарата «Норвела» при лечении НПВС-индуцированной гастропатии.
-                </li>
-
-                <li>
-                    Kaidarova D., Chingisova Zh., Shatkovskaya O., Seysenbayeva G., <strong>Ismailov S.</strong> (2017).
-                    Dynamics of disease rate of oncogynaecologic pathology in the Republic of Kazakhstan.
-                </li>
-
-                <li>
-                    Kaidarova D., Kairbayev M., Kim H., Han B.D., <strong>Ismailov S.</strong>, Shibanova A.,
-                    Kukubassov Y., Shalbayeva R., Yeleubayeva Zh., Bolatbekova R., Park H.J., Kim H.J. (2018).
-                    Prevalence of high-risk human papillomaviruses and abnormal PAP smears among women.
-                    <br>
-                    <a href="https://doi.org/10.1200/JCO.2018.36.15_suppl.e13596" target="_blank">DOI</a>
-                </li>
-
-                <li>
-                    Kaidarova D., Bolatbekova R., Naumann R., Brown J., Kukubassov Y., Goncharova T.,
-                    Orazgaliyeva M., Aidarov A., Osikbayeva S., Satanova A., Kaldybekov D.,
-                    <strong>Ismailov S.</strong> (2023).
-                    BRCA mutations in high grade serous ovarian cancer in Kazakhstan.
-                    <br>
-                    <a href="https://www.international-journal-of-gynecological-cancer.com/article/S1048-891X(24)11616-7/pdf" target="_blank">
-                        Full text
-                    </a>
-                </li>
-
-        </ol>
 
     </div>
 </div>
