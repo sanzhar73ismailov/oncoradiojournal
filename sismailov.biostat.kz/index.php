@@ -23,6 +23,7 @@ $translations = [
         'twitter_title' => 'О себе — Биостатистика, онкология, публикации, программирование',
         'twitter_description' => 'Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании. Создатель сайта архива журнала.',
         'heading_main' => 'О себе',
+        'full_name' => 'Исмаилов Санжар Булатович',
         'text_intro' => 'Я — <strong>кандидат медицинских наук</strong>, специалист в области <strong>биостатистики, онкологии и медицинской информатики</strong> с многолетним опытом научной и практической работы.',
         'text_dissertation' => 'В 2006 году защитил диссертацию на тему <strong>«Генетические факторы предрасположенности к развитию рака шейки матки в Казахстане»</strong> по специальностям <strong>14.00.14 — онкология</strong> и <strong>03.00.15 — генетика</strong>.',
         'highlights' => [
@@ -54,14 +55,15 @@ $translations = [
     ],
     'en' => [
         'page_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
-        'meta_description' => 'Candidate of Medical Sciences, specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming (Java, Python, R, SPSS). Creator of the journal archive website.',
+        'meta_description' => 'Candidate of Medical Sciences (PhD), specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming (Java, Python, R, SPSS). Creator of the journal archive website.',
         'meta_keywords' => 'biostatistics, oncology, medical informatics, publications, international journals, HPV, clinical research, statistics, programming, Java, R, Python, SPSS, journal archive website',
         'og_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
-        'og_description' => 'Candidate of Medical Sciences, specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming. Creator of the journal archive website.',
+        'og_description' => 'Candidate of Medical Sciences (PhD), specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming. Creator of the journal archive website.',
         'twitter_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
-        'twitter_description' => 'Candidate of Medical Sciences, specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming. Creator of the journal archive website.',
+        'twitter_description' => 'Candidate of Medical Sciences (PhD), specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming. Creator of the journal archive website.',
         'heading_main' => 'About Me',
-        'text_intro' => 'I am a <strong>Candidate of Medical Sciences</strong>, a specialist in <strong>biostatistics, oncology, and medical informatics</strong> with many years of experience in scientific and practical work.',
+        'full_name' => 'Sanzhar Ismailov',
+        'text_intro' => 'I am a <strong>Candidate of Medical Sciences (PhD)</strong>, a specialist in <strong>biostatistics, oncology, and medical informatics</strong> with many years of experience in scientific and practical work.',
         'text_dissertation' => 'In 2006, I defended my dissertation on the topic <strong>“Genetic predisposition factors for the development of cervical cancer in Kazakhstan”</strong> in the specialties <strong>14.00.14 — oncology</strong> and <strong>03.00.15 — genetics</strong>.',
         'highlights' => [
             '🧬 Working in <strong>oncology and biostatistics</strong>',
@@ -97,6 +99,7 @@ $translations = [
         'twitter_title' => 'Өзім туралы — Биостатистика, онкология, жарияланымдар, бағдарламалау',
         'twitter_description' => 'Медицина ғылымдарының кандидаты, биостатистика және онкология саласының маманы. Халықаралық журналдардағы жарияланымдар, клиникалық зерттеулер және бағдарламалау тәжірибесі. Журнал архивінің сайтын жасаушы.',
         'heading_main' => 'Өзім туралы',
+        'full_name' => 'Исмаилов Санжар Болатұлы', // (можете изменить на Санжар Болатұлы Исмаилов, если нужно)
         'text_intro' => 'Мен — <strong>медицина ғылымдарының кандидаты</strong>, <strong>биостатистика, онкология және медициналық информатика</strong> саласында ғылыми-практикалық жұмыста ұзақ жылдық тәжірибесі бар маманмын.',
         'text_dissertation' => '2006 жылы <strong>«Қазақстанда жатыр мойны обырының дамуына бейімділіктің генетикалық факторлары»</strong> тақырыбында <strong>14.00.14 — онкология</strong> және <strong>03.00.15 — генетика</strong> мамандықтары бойынша диссертация қорғадым.',
         'highlights' => [
@@ -168,11 +171,11 @@ $t = $translations[$lang];
 
     <style>
         body {
-            padding: 50px;
+            padding: 20px;
             background-color: #f8f9fa;
         }
         .card {
-            padding: 100px;
+            padding: 30px;
         }
         ol, ul {
             margin-left: 25px;
@@ -196,6 +199,32 @@ $t = $translations[$lang];
             background-color: #0d6efd;
             color: white;
         }
+        .full-name {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
+            color: #6c757d;
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .full-name {
+                font-size: 1.2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -208,7 +237,8 @@ $t = $translations[$lang];
     </div>
 
     <div class="card shadow-sm">
-        <h2 class="mb-3"><?php echo $t['heading_main']; ?></h2>
+        <h2 class="mb-1"><?php echo $t['heading_main']; ?></h2>
+        <div class="full-name"><?php echo htmlspecialchars($t['full_name']); ?></div>
 
         <p><?php echo $t['text_intro']; ?></p>
         <p><?php echo $t['text_dissertation']; ?></p>
