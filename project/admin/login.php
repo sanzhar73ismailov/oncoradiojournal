@@ -11,7 +11,7 @@ include_once 'includes/global.php';
 $login = isset($_REQUEST['login']) ?  trim($_REQUEST['login']) : null;
 $password = isset($_REQUEST['password']) ?  trim($_REQUEST['password']) : null;
 
-$password = md5($password);
+$password = md5($password ?? "");
 $object = new User();
 $object->username_email=$login;
 $smarty->assign('object',$object);

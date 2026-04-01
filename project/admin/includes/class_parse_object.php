@@ -439,8 +439,8 @@ class ParseAuthor extends ParseForm{
 	}
 	
 	function trim_and_to_upper($str){
-		$str = trim($str);
-		$str = mb_strtoupper($str);
+		$str = trim($str ?? "");
+		$str = mb_strtoupper($str ?? "");
 		return $str;
 	}
 	

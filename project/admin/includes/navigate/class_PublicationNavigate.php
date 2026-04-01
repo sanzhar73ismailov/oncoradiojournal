@@ -229,22 +229,22 @@ class PublicationNavigate extends AbstractNavigate{
 		$entity->abstract_kaz_to_check = $entity->abstract_kaz;
 		$entity->abstract_eng_to_check = $entity->abstract_eng;
 		
-		$entity->abstract_rus_to_check = str_replace("- ","<span style='color:red;font-size:x-large;font-weight: bold;'>-*</span>", $entity->abstract_rus_to_check);
-		$entity->abstract_kaz_to_check = str_replace("- ","<span style='color:red;font-size:x-large;font-weight: bold;'>-*</span>", $entity->abstract_kaz_to_check);
-		$entity->abstract_eng_to_check = str_replace("- ","<span style='color:red;font-size:x-large;font-weight: bold;'>-*</span>", $entity->abstract_eng_to_check);
+		$entity->abstract_rus_to_check = str_replace("- ","<span style='color:red;font-size:x-large;font-weight: bold;'>-*</span>", $entity->abstract_rus_to_check ?? "");
+		$entity->abstract_kaz_to_check = str_replace("- ","<span style='color:red;font-size:x-large;font-weight: bold;'>-*</span>", $entity->abstract_kaz_to_check ?? "");
+		$entity->abstract_eng_to_check = str_replace("- ","<span style='color:red;font-size:x-large;font-weight: bold;'>-*</span>", $entity->abstract_eng_to_check ?? "");
 		
-		$entity->abstract_rus_to_check = str_replace(" ,","<span style='color:red;font-size:x-large;font-weight: bold;'>*, </span>", $entity->abstract_rus_to_check); // меняем " ,", красный "*,"
-		$entity->abstract_kaz_to_check = str_replace(" ,","<span style='color:red;font-size:x-large;font-weight: bold;'>*, </span>", $entity->abstract_kaz_to_check); // меняем " ,", красный "*,"
-		$entity->abstract_eng_to_check = str_replace(" ,","<span style='color:red;font-size:x-large;font-weight: bold;'>*, </span>", $entity->abstract_eng_to_check); // меняем " ,", красный "*,"
+		$entity->abstract_rus_to_check = str_replace(" ,","<span style='color:red;font-size:x-large;font-weight: bold;'>*, </span>", $entity->abstract_rus_to_check ?? ""); // меняем " ,", красный "*,"
+		$entity->abstract_kaz_to_check = str_replace(" ,","<span style='color:red;font-size:x-large;font-weight: bold;'>*, </span>", $entity->abstract_kaz_to_check ?? ""); // меняем " ,", красный "*,"
+		$entity->abstract_eng_to_check = str_replace(" ,","<span style='color:red;font-size:x-large;font-weight: bold;'>*, </span>", $entity->abstract_eng_to_check ?? ""); // меняем " ,", красный "*,"
 		
-		$entity->abstract_rus_to_check = str_replace(" .","<span style='color:red;font-size:x-large;font-weight: bold;'>*. </span>", $entity->abstract_rus_to_check); // меняем " .", красный "*."
-		$entity->abstract_kaz_to_check = str_replace(" .","<span style='color:red;font-size:x-large;font-weight: bold;'>*. </span>", $entity->abstract_kaz_to_check); // меняем " .", красный "*."
-		$entity->abstract_eng_to_check = str_replace(" .","<span style='color:red;font-size:x-large;font-weight: bold;'>*. </span>", $entity->abstract_eng_to_check); // меняем " .", красный "*."
+		$entity->abstract_rus_to_check = str_replace(" .","<span style='color:red;font-size:x-large;font-weight: bold;'>*. </span>", $entity->abstract_rus_to_check ?? ""); // меняем " .", красный "*."
+		$entity->abstract_kaz_to_check = str_replace(" .","<span style='color:red;font-size:x-large;font-weight: bold;'>*. </span>", $entity->abstract_kaz_to_check ?? ""); // меняем " .", красный "*."
+		$entity->abstract_eng_to_check = str_replace(" .","<span style='color:red;font-size:x-large;font-weight: bold;'>*. </span>", $entity->abstract_eng_to_check ?? ""); // меняем " .", красный "*."
 		
 		
-		$entity->abstract_rus_to_check = str_replace("¬","<span style='color:red;font-size:x-large;font-weight: bold;'>¬</span>", $entity->abstract_rus_to_check);
-		$entity->abstract_kaz_to_check = str_replace("¬","<span style='color:red;font-size:x-large;font-weight: bold;'>¬</span>", $entity->abstract_kaz_to_check);
-		$entity->abstract_eng_to_check = str_replace("¬","<span style='color:red;font-size:x-large;font-weight: bold;'>¬</span>", $entity->abstract_eng_to_check);
+		$entity->abstract_rus_to_check = str_replace("¬","<span style='color:red;font-size:x-large;font-weight: bold;'>¬</span>", $entity->abstract_rus_to_check ?? "");
+		$entity->abstract_kaz_to_check = str_replace("¬","<span style='color:red;font-size:x-large;font-weight: bold;'>¬</span>", $entity->abstract_kaz_to_check ?? "");
+		$entity->abstract_eng_to_check = str_replace("¬","<span style='color:red;font-size:x-large;font-weight: bold;'>¬</span>", $entity->abstract_eng_to_check ?? "");
 		/*
 		$entity->abstract_rus_to_check = preg_replace("/,(\S)/","<span style='color:red;font-size:x-large;font-weight: bold;'>,$1</span>", $entity->abstract_rus_to_check);
 		$entity->abstract_kaz_to_check = preg_replace("/,(\S)/","<span style='color:red;font-size:x-large;font-weight: bold;'>,$1</span>", $entity->abstract_kaz_to_check);
@@ -342,7 +342,7 @@ class PublicationNavigate extends AbstractNavigate{
 	}
 
 	function getKeywordAsSeparatedStrings($arrayKeywords){
-		$names = array_map(create_function('$o', 'return $o->name;'), $arrayKeywords);
+        $names = array_map(function($o) { return $o->name; }, $arrayKeywords);
 		//var_dump($catIds);
 		$comma_separated = implode(",", $names);
 		return $comma_separated;

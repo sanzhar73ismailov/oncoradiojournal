@@ -515,7 +515,7 @@ class Dao {
 			$array = $dao->getByNativeQuery ( $object, "select * from bibl_publication_keyword where publication_id=" . $publ_id );
 			if (count ( $array ) > 0) {
 				log_echo ( $array );
-				$catIds = array_map ( create_function ( '$o', 'return $o->keyword_id;' ), $array );
+                $catIds = array_map(function($o) { return $o->keyword_id; }, $array);
 				$comma_separated = implode ( ",", $catIds );
 				$langAnd = "";
 				if ($lang != null and $lang != "") {

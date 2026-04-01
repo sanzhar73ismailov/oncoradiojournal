@@ -81,6 +81,11 @@ class Author {
 	public $email;
 	public $degree;
 	public $user;
+    public $year;
+    public $number;
+    public $issue;
+    public $file;
+    public $sections;
 	public $insert_date;
 	public function __toString() {
 		return "id: " . $this->id . ", last_name_rus: " . $this->last_name_rus;
