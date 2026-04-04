@@ -1,6 +1,19 @@
 <?php
 session_start();
 
+$startTime = microtime(true);
+require_once 'functions.php';
+require_once 'sismailov_config.php';
+$pdo = new PDO(
+    "mysql:host=localhost;dbname=" . DB_NAME . ";charset=utf8mb4",
+    DB_USER,
+    DB_PASS,
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ]
+);
+
+
 // Список поддерживаемых языков
 $allowed_langs = ['ru', 'en', 'kk'];
 $default_lang = 'ru';
@@ -292,3 +305,6 @@ $t = $translations[$lang];
 
 </body>
 </html>
+<?php
+logVisit($pdo, $startTime, $lang);
+?>
