@@ -26,15 +26,18 @@ public class IssueParser {
         public String issue;      // номер выпуска
         public String titleIssue; // название выпуска (из <title>)
         public String titlePaper; // название статьи
-        public String url;
+        public String url;        // ссылка на страницу статьи
+        public String pdfUrl;     // прямая ссылка на PDF (формируется из HTML)
 
-        public ArticleData(int year, String issueSeq, String issue, String titleIssue, String titlePaper, String url) {
+        public ArticleData(int year, String issueSeq, String issue, String titleIssue,
+                           String titlePaper, String url, String pdfUrl) {
             this.year = year;
             this.issueSeq = issueSeq;
             this.issue = issue;
             this.titleIssue = titleIssue;
             this.titlePaper = titlePaper;
             this.url = url;
+            this.pdfUrl = pdfUrl;
         }
 
         public ArticleData() {}
@@ -56,24 +59,20 @@ public class IssueParser {
                 try {
                     Document doc = Jsoup.parse(htmlFile.toFile(), "UTF-8");
 
-                    // Проверяем, что это страница выпуска
                     String title = doc.title();
                     if (!title.contains("содержание выпуска")) {
                         System.out.println("  Пропускаем (не страница выпуска): " + title);
                         continue;
                     }
 
-                    // 1. Извлекаем название выпуска (titleIssue)
                     String titleIssue = title.trim();
 
-                    // 2. Извлекаем год
                     int year = extractYear(doc, title);
                     if (year == 0) {
                         System.err.println("  Не удалось определить год, пропускаем файл");
                         continue;
                     }
 
-                    // 3. Извлекаем номер и том (issue и issueSeq)
                     String[] issueAndSeq = extractIssueAndSeq(doc);
                     String issue = issueAndSeq[0];
                     String issueSeq = issueAndSeq[1];
@@ -82,7 +81,6 @@ public class IssueParser {
                         continue;
                     }
 
-                    // 4. Парсим строки статей
                     Elements articleRows = doc.select("tr[id^=arw]");
                     if (articleRows.isEmpty()) {
                         System.out.println("  Статей не найдено");
@@ -91,19 +89,29 @@ public class IssueParser {
 
                     int articleCount = 0;
                     for (Element row : articleRows) {
-                        Element link = row.selectFirst("a[href*=item.asp?id=]");
-                        if (link == null) continue;
+                        // 1. Ссылка на страницу статьи (item.asp?id=...)
+                        Element itemLink = row.selectFirst("a[href*=item.asp?id=]");
+                        if (itemLink == null) continue;
 
-                        String href = link.attr("href");
+                        String href = itemLink.attr("href");
                         String articleId = extractIdFromUrl(href);
                         if (articleId.isEmpty()) continue;
 
-                        String titlePaper = link.selectFirst("b, span, b span").text();
-                        if (titlePaper.isEmpty()) titlePaper = link.text();
+                        // 2. Название статьи
+                        String titlePaper = itemLink.selectFirst("b, span, b span").text();
+                        if (titlePaper.isEmpty()) titlePaper = itemLink.text();
 
                         String url = "https://elibrary.ru/item.asp?id=" + articleId;
 
-                        ArticleData data = new ArticleData(year, issueSeq, issue, titleIssue, titlePaper, url);
+                        // 3. Поиск номера файла для PDF из javascript:load_article(...)
+                        String fileNumber = extractFileNumberFromRow(row);
+                        String pdfUrl = null;
+                        if (fileNumber != null) {
+                            pdfUrl = String.format("https://elibrary.ru/download/elibrary_%s_%s.pdf", articleId, fileNumber);
+                        }
+
+                        ArticleData data = new ArticleData(year, issueSeq, issue, titleIssue,
+                                titlePaper, url, pdfUrl);
                         allArticles.add(data);
                         articleCount++;
                     }
@@ -115,7 +123,6 @@ public class IssueParser {
             }
         }
 
-        // Сохраняем JSON
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
         mapper.writeValue(new File(OUTPUT_JSON), allArticles);
@@ -123,57 +130,58 @@ public class IssueParser {
         System.out.println("Сохранено " + allArticles.size() + " записей в " + OUTPUT_JSON);
     }
 
-    // === Извлечение года из документа или заголовка ===
+    // Извлекает второй числовой параметр из javascript:load_article(число)
+    private static String extractFileNumberFromRow(Element row) {
+        // Ищем ссылку с атрибутом href, начинающимся на javascript:load_article
+        Element jsLink = row.selectFirst("a[href^=javascript:load_article]");
+        if (jsLink == null) return null;
+        String jsHref = jsLink.attr("href");
+        Pattern p = Pattern.compile("load_article\\((\\d+)\\)");
+        Matcher m = p.matcher(jsHref);
+        if (m.find()) {
+            return m.group(1);
+        }
+        return null;
+    }
+
+    // === Вспомогательные методы (без изменений) ===
+
     private static int extractYear(Document doc, String title) {
-        // Сначала пробуем из явного блока на странице
         Element yearElement = doc.selectFirst("td:containsOwn(Год:), div:containsOwn(Год:)");
         if (yearElement != null) {
             String text = yearElement.text();
             Pattern p = Pattern.compile("Год:\\s*(\\d{4})");
             Matcher m = p.matcher(text);
-            if (m.find()) {
-                return Integer.parseInt(m.group(1));
-            }
+            if (m.find()) return Integer.parseInt(m.group(1));
         }
-        // Ищем в заголовке "за 2017 год"
         Pattern pTitle = Pattern.compile("за\\s*(\\d{4})\\s*год");
         Matcher mTitle = pTitle.matcher(title);
-        if (mTitle.find()) {
-            return Integer.parseInt(mTitle.group(1));
-        }
-        // Ищем везде
+        if (mTitle.find()) return Integer.parseInt(mTitle.group(1));
         String html = doc.html();
         Pattern pAny = Pattern.compile("Год[:\\s]+(\\d{4})");
         Matcher mAny = pAny.matcher(html);
-        if (mAny.find()) {
-            return Integer.parseInt(mAny.group(1));
-        }
+        if (mAny.find()) return Integer.parseInt(mAny.group(1));
         return 0;
     }
 
-    // === Извлечение номера (issue) и тома (issueSeq) из строки "Номер: 2 (44)" ===
     private static String[] extractIssueAndSeq(Document doc) {
         String[] result = new String[]{"unknown", "unknown"};
         Element elem = doc.selectFirst("td:containsOwn(Номер:), div:containsOwn(Номер:)");
         if (elem == null) return result;
         String text = elem.text();
-        // Ищем паттерн: Номер: 2 (44)  или  Номер: 3-4 (33-34)
         Pattern pattern = Pattern.compile("Номер:\\s*(\\S+)\\s*\\(([^)]+)\\)");
         Matcher matcher = pattern.matcher(text);
         if (matcher.find()) {
-            result[0] = matcher.group(1).trim();   // issue
-            result[1] = matcher.group(2).trim();   // issueSeq (том)
+            result[0] = matcher.group(1).trim();
+            result[1] = matcher.group(2).trim();
         }
         return result;
     }
 
-    // === Извлечение ID из ссылки item.asp?id=xxxxx ===
     private static String extractIdFromUrl(String url) {
         Pattern p = Pattern.compile("id=(\\d+)");
         Matcher m = p.matcher(url);
-        if (m.find()) {
-            return m.group(1);
-        }
+        if (m.find()) return m.group(1);
         return "";
     }
 }
