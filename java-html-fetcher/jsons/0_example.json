@@ -1,0 +1,95 @@
+{
+  "year": 2017,
+  "issue_number": 1,
+  "issue_total_number": 43,
+  "issue_url": null,
+  "udc": "616.146-006.6",
+  "title": {
+    "ru": "Стратегия первичной и вторичной профилактики рака шейки матки",
+    "en": "Strategy of Primary and Secondary Prevention of Cervical Cancer"
+  },
+  "type": {
+    "ru": "Онкогинекология",
+    "en": "Oncogynecology"
+  },
+  "pages": {
+    "start": 7,
+    "end": 11
+  },
+  "article_url": null,
+  "translated_version_url": null,
+  "pdf": {
+    "id": "pdf_0001",
+    "url": null
+  },
+  "authors": [
+    {
+      "ru": {
+        "last_name": "Кайдарова",
+        "first_name": "Диляра",
+        "middle_name": "Р."
+      },
+      "en": {
+        "last_name": "Kaidarova",
+        "first_name": "Dilyara",
+        "middle_name": "R."
+      },
+      "corresponding": true,
+      "email": "dilyara.kaidarova@gmail.com",
+      "organizations": [
+        {
+          "ru": "Казахский научно-исследовательский институт онкологии и радиологии, Алматы, Республика Казахстан",
+          "en": "Kazakh Research Institute of Oncology and Radiology, Almaty, Republic of Kazakhstan"
+        }
+      ]
+    },
+    {
+      "ru": {
+        "last_name": "Кайрбаев",
+        "first_name": "М.",
+        "middle_name": "Р."
+      },
+      "en": {
+        "last_name": "Kairbaev",
+        "first_name": "M.",
+        "middle_name": "R."
+      },
+      "corresponding": false,
+      "email": null,
+      "organizations": [
+        {
+          "ru": "Казахский научно-исследовательский институт онкологии и радиологии, Алматы, Республика Казахстан",
+          "en": "Kazakh Research Institute of Oncology and Radiology, Almaty, Republic of Kazakhstan"
+        }
+      ]
+    },
+    {
+      "ru": {
+        "last_name": "Болатбекова",
+        "first_name": "Р.",
+        "middle_name": "О."
+      },
+      "en": {
+        "last_name": "Bolatbekova",
+        "first_name": "R.",
+        "middle_name": "O."
+      },
+      "corresponding": false,
+      "email": null,
+      "organizations": [
+        {
+          "ru": "Казахский научно-исследовательский институт онкологии и радиологии, Алматы, Республика Казахстан",
+          "en": "Kazakh Research Institute of Oncology and Radiology, Almaty, Republic of Kazakhstan"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    "вакцинация",
+    "вирус папилломы человека",
+    "рак шейки матки",
+    "скрининг"
+  ],
+  "abstract": "Отсутствие программ скрининга и высокой распространенности вируса папилломы человека (ВПЧ) среди населения являются основными причинами высокой заболеваемости раком шейки матки в странах с низким уровнем экономики, а также в развивающихся странах. Благодаря открытию Харальдом зур Хаузеном связи хронической персистенции ВПЧ высокого онкогенного риска (ВПЧ ВР) и развития рака шейки матки, было положено начало в организации первичной профилактики рака шейки матки, то есть созданию вакцин против вируса папилломы человека высокого онкогенного риска, а также развитию ВПЧ – тестирования в качестве новой стратегии вторичной профилактики шейки матки.",
+  "reference": "Кайдарова Д.Р., Кайрбаев М.Р., Болатбекова Р.О. Стратегия первичной и вторичной профилактики рака шейки матки. Онкология и радиология Казахстана, 2017, 43 (1), 7-11."
+}
