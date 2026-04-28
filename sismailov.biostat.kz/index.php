@@ -28,7 +28,7 @@ $photoUrl = 'https://' . $_SERVER['HTTP_HOST']. '/img/sismailov_photo.png';;
 // ======================== ТЕКСТЫ ДЛЯ КАЖДОГО ЯЗЫКА ========================
 $translations = [
     'ru' => [
-        'page_title' => 'О себе — Биостатистика, онкология, публикации, программирование',
+        'page_title' => 'Исмаилов Санжар — Биостатистика, онкология, публикации, программирование',
         'meta_description' => 'Кандидат медицинских наук, специалист по биостатистике и онкологии. Публикации в международных журналах, опыт в клинических исследованиях и программировании (Java, Python, R, SPSS). Создатель сайта архива журнала.',
         'meta_keywords' => 'биостатистика, онкология, медицинская информатика, публикации, международные журналы, HPV, клинические исследования, статистика, программирование, Java, R, Python, SPSS, сайт архива журнала',
         'og_title' => 'О себе — Биостатистика, онкология, публикации, программирование',
@@ -67,7 +67,7 @@ $translations = [
         ]
     ],
     'en' => [
-        'page_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
+        'page_title' => 'Sanzhar Ismailov — Biostatistics, Oncology, Publications, Programming',
         'meta_description' => 'Candidate of Medical Sciences (PhD), specialist in biostatistics and oncology. Publications in international journals, experience in clinical research and programming (Java, Python, R, SPSS). Creator of the journal archive website.',
         'meta_keywords' => 'biostatistics, oncology, medical informatics, publications, international journals, HPV, clinical research, statistics, programming, Java, R, Python, SPSS, journal archive website',
         'og_title' => 'About Me — Biostatistics, Oncology, Publications, Programming',
@@ -104,7 +104,7 @@ $translations = [
         'publications' => [] // same as ru
     ],
     'kk' => [
-        'page_title' => 'Өзім туралы — Биостатистика, онкология, жарияланымдар, бағдарламалау',
+        'page_title' => 'Санжар Исмаилов — Биостатистика, онкология, жарияланымдар, бағдарламалау',
         'meta_description' => 'Медицина ғылымдарының кандидаты, биостатистика және онкология саласының маманы. Халықаралық журналдардағы жарияланымдар, клиникалық зерттеулер және бағдарламалау тәжірибесі (Java, Python, R, SPSS). Журнал архивінің сайтын жасаушы.',
         'meta_keywords' => 'биостатистика, онкология, медициналық информатика, жарияланымдар, халықаралық журналдар, HPV, клиникалық зерттеулер, статистика, бағдарламалау, Java, R, Python, SPSS, журнал архивінің сайты',
         'og_title' => 'Өзім туралы — Биостатистика, онкология, жарияланымдар, бағдарламалау',
@@ -181,6 +181,10 @@ $t = $translations[$lang];
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://sismailov.biostat.kz/">
+    <link rel="alternate" hreflang="ru" href="https://sismailov.biostat.kz/?lang=ru">
+    <link rel="alternate" hreflang="en" href="https://sismailov.biostat.kz/?lang=en">
+    <link rel="alternate" hreflang="kk" href="https://sismailov.biostat.kz/?lang=kk">
 
     <style>
         body {
@@ -239,6 +243,30 @@ $t = $translations[$lang];
             }
         }
     </style>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Sanzhar Ismailov",
+          "url": "https://sismailov.biostat.kz/",
+          "image": "<?php echo $photoUrl; ?>",
+  "jobTitle": "Biostatistician, Oncology Researcher",
+  "sameAs": [
+    "https://orcid.org/0000-0001-8907-5874",
+    "https://linkedin.com/in/sanzhar-ismailov-53033377",
+    "https://github.com/sanzhar73ismailov",
+    "https://scholar.google.com/citations?user=m6oeeG0AAAAJ",
+    "https://www.scopus.com/authid/detail.uri?authorId=16304383300"
+  ],
+  "knowsAbout": [
+    "Biostatistics",
+    "Oncology",
+    "Clinical Research",
+    "HPV",
+    "Medical Informatics"
+  ]
+}
+    </script>
 </head>
 <body>
 
@@ -250,7 +278,7 @@ $t = $translations[$lang];
     </div>
 
     <div class="card shadow-sm">
-        <h2 class="mb-1"><?php echo $t['heading_main']; ?></h2>
+        <h1 class="mb-1"><?php echo $t['heading_main']; ?></h1>
         <div class="full-name"><?php echo htmlspecialchars($t['full_name']); ?></div>
 
         <p><?php echo $t['text_intro']; ?></p>
