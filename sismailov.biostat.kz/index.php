@@ -43,6 +43,7 @@ $translations = [
             '🧬 Работаю в <strong>онкологии и биостатистике</strong>',
             '📊 Имею публикации, включая международные',
             '💻 Совмещаю это с программированием',
+            '📜 Являюсь автором свидетельства на программу для ЭВМ «Фармакологическое средство (ФС)» №1555 от 14.10.2010.',
             '📚 Создал и веду сайт архива журнала:'
         ],
         'interests_text' => 'Моя основная область интересов — <strong>применение статистических методов в клинических и эпидемиологических исследованиях</strong>, особенно в онкологии.',
@@ -82,6 +83,7 @@ $translations = [
             '🧬 Working in <strong>oncology and biostatistics</strong>',
             '📊 Have publications, including international ones',
             '💻 Combine this with programming',
+            '📜 I am the author of the computer program certificate "Pharmacological agent (FA)" No.1555 dated 14.10.2010.',
             '📚 Created and maintain the journal archive website:'
         ],
         'interests_text' => 'My main area of interest is <strong>the application of statistical methods in clinical and epidemiological research</strong>, especially in oncology.',
@@ -119,6 +121,7 @@ $translations = [
             '🧬 <strong>Онкология және биостатистика</strong> саласында жұмыс істеймін',
             '📊 Халықаралық деңгейдегі жарияланымдарым бар',
             '💻 Осыны бағдарламалаумен ұштастырамын',
+            '📜 «Фармакологиялық құрал (ФҚ)» ЭЕМ-ге арналған бағдарламаға №1555 (14.10.2010) авторлық куәліктің иесімін.',
             '📚 Журнал архивінің сайтын құрдым және жүргіземін:'
         ],
         'interests_text' => 'Менің негізгі қызығушылығым — <strong>клиникалық және эпидемиологиялық зерттеулерде статистикалық әдістерді қолдану</strong>, әсіресе онкология саласында.',
